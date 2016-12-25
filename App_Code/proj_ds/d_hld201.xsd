@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="d_hld201" targetNamespace="http://tempuri.org/d_hld201.xsd" xmlns:mstns="http://tempuri.org/d_hld201.xsd" xmlns="http://tempuri.org/d_hld201.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="d_hld201" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="d_hld201" msprop:Generator_DataSetName="d_hld201">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="hld201" msprop:Generator_UserTableName="hld201" msprop:Generator_RowDeletedName="hld201RowDeleted" msprop:Generator_TableClassName="hld201DataTable" msprop:Generator_RowChangedName="hld201RowChanged" msprop:Generator_RowClassName="hld201Row" msprop:Generator_RowChangingName="hld201RowChanging" msprop:Generator_RowEvArgName="hld201RowChangeEvent" msprop:Generator_RowEvHandlerName="hld201RowChangeEventHandler" msprop:Generator_TablePropName="hld201" msprop:Generator_TableVarName="tablehld201" msprop:Generator_RowDeletingName="hld201RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="hld201_logid"  msdata:ReadOnly="true" msdata:AutoIncrement="true"  msprop:Generator_UserColumnName="hld201_logid" msprop:Generator_ColumnPropNameInRow="hld201_logid" msprop:Generator_ColumnVarNameInTable="columnhld201_logid" msprop:Generator_ColumnPropNameInTable="hld201_logidColumn" type="xs:decimal"  />
+              <xs:element name="hld201_vid" msprop:Generator_UserColumnName="hld201_vid" msprop:Generator_ColumnPropNameInRow="hld201_vid" msprop:Generator_ColumnVarNameInTable="columnhld201_vid" msprop:Generator_ColumnPropNameInTable="hld201_vidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hld201_logtype" msprop:Generator_UserColumnName="hld201_logtype" msprop:Generator_ColumnPropNameInRow="hld201_logtype" msprop:Generator_ColumnVarNameInTable="columnhld201_logtype" msprop:Generator_ColumnPropNameInTable="hld201_logtypeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hld201_logdate"  msprop:Generator_UserColumnName="hld201_logdate" msprop:Generator_ColumnPropNameInRow="hld201_logdate" msprop:Generator_ColumnVarNameInTable="columnhld201_logdate" msprop:Generator_ColumnPropNameInTable="hld201_logdateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hld201_ps" msprop:Generator_UserColumnName="hld201_ps" msprop:Generator_ColumnPropNameInRow="hld201_ps" msprop:Generator_ColumnVarNameInTable="columnhld201_ps" msprop:Generator_ColumnPropNameInTable="hld201_psColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hld201_aid" msprop:Generator_UserColumnName="hld201_aid" msprop:Generator_ColumnPropNameInRow="hld201_aid" msprop:Generator_ColumnVarNameInTable="columnhld201_aid" msprop:Generator_ColumnPropNameInTable="hld201_aidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hld201_adt"  msprop:Generator_UserColumnName="hld201_adt" msprop:Generator_ColumnPropNameInRow="hld201_adt" msprop:Generator_ColumnVarNameInTable="columnhld201_adt" msprop:Generator_ColumnPropNameInTable="hld201_adtColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hld201_uid" msprop:Generator_UserColumnName="hld201_uid" msprop:Generator_ColumnPropNameInRow="hld201_uid" msprop:Generator_ColumnVarNameInTable="columnhld201_uid" msprop:Generator_ColumnPropNameInTable="hld201_uidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hld201_udt"  msprop:Generator_UserColumnName="hld201_udt" msprop:Generator_ColumnPropNameInRow="hld201_udt" msprop:Generator_ColumnVarNameInTable="columnhld201_udt" msprop:Generator_ColumnPropNameInTable="hld201_udtColumn" type="xs:dateTime" minOccurs="0" />
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:hld201" />
+      <xs:field xpath="mstns:hld201_logid" />
+      </xs:unique>
+
+  </xs:element>
+</xs:schema>

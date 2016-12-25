@@ -1,0 +1,157 @@
+﻿
+// *********************************************************************************
+// 1. 程式描述：系統公告管理–系統公告
+// 2. 撰寫人員：
+// *********************************************************************************
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using WIT.Template.Project;
+
+public partial class sys_z_z01_p_z0203 : p_sBase
+{
+	#region ☆ Declare Variables -------------------------------------- 撰寫人員：Linda
+
+	/// <summary>變數描述：公告管理資料元件</summary>
+    //protected ndb_aec02 indb_aec02 = new ndb_aec02();
+
+	#endregion
+
+	// =========================================================================
+	/// <summary>
+	/// 事件描述：網頁開啟
+	/// </summary>
+	protected void Page_Load(object sender, EventArgs e)
+    {
+		this.IsAJAXScript = true;
+		
+		//U_DateSelect_ROC3.Value = "2008 / 06 / 30";
+
+        // 建立一個暫存表格1
+        DataTable ldt_EmpList = new DataTable("EmpList");
+        DataView ldv_EmpList = ldt_EmpList.DefaultView;
+        DataRowView ldrv_New;
+
+        // 增加欄位
+        ldt_EmpList.Columns.Add("課程代碼", typeof(String));
+        ldt_EmpList.Columns.Add("班級代碼", typeof(String));
+        ldt_EmpList.Columns.Add("課程名稱", typeof(String));
+        ldt_EmpList.Columns.Add("老師", typeof(String));
+        ldt_EmpList.Columns.Add("日期", typeof(String));
+        ldt_EmpList.Columns.Add("時間", typeof(String));
+        ldt_EmpList.Columns.Add("方式", typeof(String));
+     
+        ldrv_New = ldv_EmpList.AddNew();
+        ldrv_New["課程代碼"] = "C097_0001";
+        ldrv_New["班級代碼"] = "01";
+        ldrv_New["課程名稱"] = "基本餵魚教學";
+        ldrv_New["老師"] = "林老師";
+        ldrv_New["日期"] = "097/12/22";
+        ldrv_New["時間"] = "10:00-12:00";
+        ldrv_New["方式"] = "指定參加";
+
+        ldrv_New = ldv_EmpList.AddNew();
+        ldrv_New["課程代碼"] = "C097_0002";
+        ldrv_New["班級代碼"] = "02";
+        ldrv_New["課程名稱"] = "進階餵魚教學";
+        ldrv_New["老師"] = "林老師";
+        ldrv_New["日期"] = "097/12/22";
+        ldrv_New["時間"] = "14:00-16:00";
+        ldrv_New["方式"] = "自由選課";
+
+        DataGrid1.DataSource = ldv_EmpList;
+        DataGrid1.DataBind();
+        
+        
+        // 建立一個暫存表格1
+        DataTable ldt_EmpList1 = new DataTable("EmpList1");
+        DataView ldv_EmpList1 = ldt_EmpList1.DefaultView;
+        DataRowView ldrv_New1;
+
+        // 增加欄位
+        ldt_EmpList1.Columns.Add("課程代碼", typeof(String));
+        ldt_EmpList1.Columns.Add("班級代碼", typeof(String));
+        ldt_EmpList1.Columns.Add("課程名稱", typeof(String));
+        ldt_EmpList1.Columns.Add("老師", typeof(String));
+        ldt_EmpList1.Columns.Add("日期", typeof(String));
+        ldt_EmpList1.Columns.Add("時間", typeof(String));
+        ldt_EmpList1.Columns.Add("方式", typeof(String));
+        ldt_EmpList1.Columns.Add("結果", typeof(String));
+        ldt_EmpList1.Columns.Add("分數", typeof(String)); 
+        
+
+
+
+        ldrv_New1 = ldv_EmpList1.AddNew();
+        ldrv_New1["課程代碼"] = "C097_0002";
+        ldrv_New1["班級代碼"] = "02";
+        ldrv_New1["課程名稱"] = "進階餵魚教學";
+        ldrv_New1["老師"] = "林老師";
+        ldrv_New1["日期"] = "097/12/22";
+        ldrv_New1["時間"] = "14:00-16:00";
+        ldrv_New1["方式"] = "自由選課";
+        ldrv_New1["結果"] = "缺課";
+        ldrv_New1["分數"] = "--";
+
+        ldrv_New1 = ldv_EmpList1.AddNew();
+        ldrv_New1["課程代碼"] = "C097_0005";
+        ldrv_New1["班級代碼"] = "02";
+        ldrv_New1["課程名稱"] = "台灣特有魚種30種";
+        ldrv_New1["老師"] = "林老師";
+        ldrv_New1["日期"] = "097/11/22";
+        ldrv_New1["時間"] = "14:00-16:00";
+        ldrv_New1["方式"] = "自由選課";
+        ldrv_New1["結果"] = "已通過";
+        ldrv_New1["分數"] = "90";
+
+            ldrv_New1 = ldv_EmpList1.AddNew();
+        ldrv_New1["課程代碼"] = "C097_0007";
+        ldrv_New1["班級代碼"] = "02";
+        ldrv_New1["課程名稱"] = "海溝怪異魚類";
+        ldrv_New1["老師"] = "王老師";
+        ldrv_New1["日期"] = "097/10/21";
+        ldrv_New1["時間"] = "14:00-16:00";
+        ldrv_New1["方式"] = "自由參加";
+        ldrv_New1["結果"] = "不及格";
+        ldrv_New1["分數"] = "40";
+
+        ldrv_New1 = ldv_EmpList1.AddNew();
+        ldrv_New1["課程代碼"] = "C097_0008";
+        ldrv_New1["班級代碼"] = "02";
+        ldrv_New1["課程名稱"] = "台灣絕種魚種大全";
+        ldrv_New1["老師"] = "王老師";
+        ldrv_New1["日期"] = "097/10/22";
+        ldrv_New1["時間"] = "14:00-16:00";
+        ldrv_New1["方式"] = "指定參加";
+        ldrv_New1["結果"] = "已參加";
+        ldrv_New1["分數"] = "";
+
+
+
+
+
+        
+        dgG.DataSource = ldv_EmpList1;
+        dgG.DataBind();
+
+
+      
+	}
+
+
+
+
+
+
+    protected void TextBox6_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+}

@@ -1,0 +1,287 @@
+/* Frame */
+
+/*
+頁面
+*/
+BODY
+{
+	margin: 0 0 0 0;
+	font-family: 新細明體;
+}
+BODY.Page
+{
+	margin: 0 0 0 0;
+	background: url(../proj_img/Body.gif);
+	font-family: 新細明體;
+}
+BODY.Frame_Head
+{
+	margin: 0 0 0 0;
+	background-color: #4b53b4;
+	font-family: 新細明體;
+	overflow: hidden;
+}
+BODY.Frame_Top
+{
+	margin: 0 0 0 0;
+	background-color: #e1ebfd;
+	font-family: 新細明體;
+	overflow: hidden;
+}
+
+
+/*
+框架欄位 - Top
+*/
+DIV.Frame_Top
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	border-width: 0px;
+	width: 100%;
+}
+
+
+/*
+框架欄位 - User
+*/
+DIV.Frame_User
+{
+	position: absolute;
+	margin: 0 0 1 1;
+	padding: 0 0 0 0;
+	top: 0px;
+	left: 0px;
+	width: 99.5%;
+	height: 28px;
+	font-size: 15px;
+	border: solid 1px #4b53b4;
+	background-color: #d6e2fd;
+	overflow: hidden;
+}
+
+TD.Frame_User
+{
+	padding: 5 0 0 2;
+	font-size: 15px;
+	color: #46366b;
+}
+
+
+/*
+區域 - Sys
+*/
+DIV.Frame_Sys
+{
+	position: absolute;
+	left: 140px;
+	margin: 0 0 1 0;
+	padding: 2 0 0 0;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	border-width: 0px;
+	overflow: hidden;
+}
+
+TD.Frame_Sys
+{
+	margin: 0 0 0 0;
+	padding: 5 0 0 0;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ff9900;
+}
+
+TD.Frame_SysImg
+{
+	margin: 0 0 0 0;
+	padding: 5 0 0 0;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ff9900;
+}
+
+TD.Frame_SysName
+{
+	margin: 0 0 0 0;
+	padding: 5 0 0 0;
+	font-size: 13px;
+	font-weight: bold;
+	color: #006000;
+}
+
+TD.Frame_SysId
+{
+	margin: 0 0 0 0;
+	padding: 5 5 0 2;
+	font-size: 12px;
+	font-weight: bold;
+	color: #999999;
+}
+
+
+/*
+框架欄位 - Left
+*/
+DIV.Frame_Left
+{
+	position: absolute;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	top: 0px;
+	left: 0px;
+	width: 99.5%;
+	height: 100%;
+	border: solid 1px #4b53b4;
+	background-color: #FFFFFF;
+	overflow: auto;
+}
+
+
+/*
+區域 - Notice
+*/
+TABLE.Frame_NoticeTable
+{
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	border: solid 1px #4b53b4;
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 13px;
+}
+
+TD.Frame_NoticeHeader
+{
+	margin: 0 0 0 0;
+	padding: 8 5 5 5;
+	font-weight: bold;
+	color: #46366b;
+	background-color: #d6e2fd;
+	text-align: center;
+}
+
+TD.Frame_NoticeIMG
+{
+	margin: 0 0 0 0;
+	padding: 5 5 0 5;
+	background-color: #eff7ff;
+}
+
+TD.Frame_NoticeDate
+{
+	margin: 0 0 0 0;
+	padding: 0 5 10 5;
+	color: #46366b;
+	background-color: #eff7ff;
+}
+
+TD.Frame_NoticeTitle
+{
+	margin: 0 0 0 0;
+	padding: 0 5 5 5;
+	color: #46366b;
+	background-color: #eff7ff;
+}
+
+A.Frame_NoticeShow
+{
+	color: #4169e1;
+	text-decoration: none;
+}
+A.Frame_NoticeShow:hover
+{
+	color: #ff9900;
+	text-decoration: none;
+}
+
+TD.Frame_NoticeUnit
+{
+	margin: 0 0 0 0;
+	padding: 0 5 5 5;
+	color: #808080;
+	background-color: #eff7ff;
+}
+
+DIV.Frame_NoticeContent
+{
+	margin: 2 0 2 0;
+	padding: 10 20 10 20;
+	font-size: 12px;
+	color: #666666;
+	line-height: 25px;
+	border: dashed 1px #4b53b4;
+	width: 100%;
+}
+
+A.Frame_NoticeUrl
+{
+	color: #4169e1;
+	text-decoration: none;
+}
+
+A.Frame_NoticeUrl:hover
+{
+	color: #ff9900;
+	text-decoration: none;
+}
+
+
+/*
+區域 - 標點符號表外框
+*/
+DIV.Symbol_Out
+{
+	z-index: 999;
+	position: absolute;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 28px;
+	border: solid 1px #4b53b4;
+	background-color: #eff7ff;
+	overflow: hidden;
+}
+
+/*
+標點符號表選單表格
+*/
+TABLE.Symbol
+{
+	margin: 5 0 0 2;
+	padding: 0 0 0 0;
+	border: solid 0px #4b53b4;
+	border-collapse: collapse;
+	width: 100%;
+	cursor: default;
+	text-align: center;
+}
+
+/*
+標點符號表選項欄位 - 一般
+*/
+TD.SBItem
+{
+	padding: 0 0 0 0;
+	font-size: 15px;
+	color: #46366b;
+}
+
+/*
+標點符號表選項欄位(mouse on) - 選擇
+*/
+TD.SBItemS
+{
+	padding: 0 0 0 0;
+	font-size: 15px;
+	font-weight: bold;
+	color: #46366b;
+	background-color: #d6e2fd;
+}

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="d_hlh102" targetNamespace="http://tempuri.org/d_hlh102.xsd" xmlns:mstns="http://tempuri.org/d_hlh102.xsd" xmlns="http://tempuri.org/d_hlh102.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="d_hlh102" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="d_hlh102" msprop:Generator_DataSetName="d_hlh102">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="hlh102" msprop:Generator_UserTableName="hlh102" msprop:Generator_RowDeletedName="hlh102RowDeleted" msprop:Generator_TableClassName="hlh102DataTable" msprop:Generator_RowChangedName="hlh102RowChanged" msprop:Generator_RowClassName="hlh102Row" msprop:Generator_RowChangingName="hlh102RowChanging" msprop:Generator_RowEvArgName="hlh102RowChangeEvent" msprop:Generator_RowEvHandlerName="hlh102RowChangeEventHandler" msprop:Generator_TablePropName="hlh102" msprop:Generator_TableVarName="tablehlh102" msprop:Generator_RowDeletingName="hlh102RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="hlh102_MessageID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="hlh102_MessageID" msprop:Generator_ColumnPropNameInRow="hlh102_MessageID" msprop:Generator_ColumnVarNameInTable="columnhlh102_MessageID" msprop:Generator_ColumnPropNameInTable="hlh102_MessageIDColumn" type="xs:int" />
+              <xs:element name="hlh102_logid" msprop:Generator_UserColumnName="hlh102_logid" msprop:Generator_ColumnPropNameInRow="hlh102_logid" msprop:Generator_ColumnVarNameInTable="columnhlh102_logid" msprop:Generator_ColumnPropNameInTable="hlh102_logidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hlh102_cname" msprop:Generator_UserColumnName="hlh102_cname" msprop:Generator_ColumnPropNameInRow="hlh102_cname" msprop:Generator_ColumnVarNameInTable="columnhlh102_cname" msprop:Generator_ColumnPropNameInTable="hlh102_cnameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hlh102_to" msprop:Generator_UserColumnName="hlh102_to" msprop:Generator_ColumnPropNameInRow="hlh102_to" msprop:Generator_ColumnVarNameInTable="columnhlh102_to" msprop:Generator_ColumnPropNameInTable="hlh102_toColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hlh102_msgid" msprop:Generator_UserColumnName="hlh102_msgid" msprop:Generator_ColumnPropNameInRow="hlh102_msgid" msprop:Generator_ColumnVarNameInTable="columnhlh102_msgid" msprop:Generator_ColumnPropNameInTable="hlh102_msgidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hlh102_message" msprop:Generator_UserColumnName="hlh102_message" msprop:Generator_ColumnPropNameInRow="hlh102_message" msprop:Generator_ColumnVarNameInTable="columnhlh102_message" msprop:Generator_ColumnPropNameInTable="hlh102_messageColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hlh102_status" msprop:Generator_UserColumnName="hlh102_status" msprop:Generator_ColumnPropNameInRow="hlh102_status" msprop:Generator_ColumnVarNameInTable="columnhlh102_status" msprop:Generator_ColumnPropNameInTable="hlh102_statusColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hlh102_aid" msprop:Generator_UserColumnName="hlh102_aid" msprop:Generator_ColumnPropNameInRow="hlh102_aid" msprop:Generator_ColumnVarNameInTable="columnhlh102_aid" msprop:Generator_ColumnPropNameInTable="hlh102_aidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hlh102_adt" msprop:Generator_UserColumnName="hlh102_adt" msprop:Generator_ColumnPropNameInRow="hlh102_adt" msprop:Generator_ColumnVarNameInTable="columnhlh102_adt" msprop:Generator_ColumnPropNameInTable="hlh102_adtColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hlh102_uid" msprop:Generator_UserColumnName="hlh102_uid" msprop:Generator_ColumnPropNameInRow="hlh102_uid" msprop:Generator_ColumnVarNameInTable="columnhlh102_uid" msprop:Generator_ColumnPropNameInTable="hlh102_uidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hlh102_udt" msprop:Generator_UserColumnName="hlh102_udt" msprop:Generator_ColumnPropNameInRow="hlh102_udt" msprop:Generator_ColumnVarNameInTable="columnhlh102_udt" msprop:Generator_ColumnPropNameInTable="hlh102_udtColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:hlh102" />
+      <xs:field xpath="mstns:hlh102_MessageID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

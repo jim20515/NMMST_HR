@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Name>NMMST_HR</Name>
-  <DataSourceID>b3fa217a-a385-45ab-acb3-ad9805ee725d</DataSourceID>
-  <ConnectionProperties>
-    <Extension>SQL</Extension>
-    <ConnectString>Data Source=192.168.1.17;Initial Catalog=NMMST_HR</ConnectString>
-  </ConnectionProperties>
-</RptDataSource>

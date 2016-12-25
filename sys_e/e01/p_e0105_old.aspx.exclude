@@ -1,0 +1,219 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="p_e0105_old.aspx.cs" Inherits="sys_e_e01_p_e0105" %>
+
+<%@ Register Src="../../proj_uctrl/u_DateSelect_ROC.ascx" TagName="u_DateSelect_ROC"
+    TagPrefix="uc1" %>
+<%@ Register Src="../../proj_uctrl/u_BtSet_iduc.ascx" TagName="u_BtSet_iduc" TagPrefix="uc1" %>
+<%@ Register Src="../../proj_uctrl/u_ProgressShow.ascx" TagName="u_ProgressShow"
+    TagPrefix="uc1" %>
+<%@ Import Namespace="WIT.Template.Project" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../../proj_css/s_GeneralStyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <div>
+                    <asp:Panel ID="pn_Contain" runat="server">
+                        <table class="G">
+                            <tr>
+                                <td style="height: 59px; width: 605px;">
+                                    <witc:DWPanel ID="DWPanel1" runat="server" CssClass="Query" Height="38px" Style="left: 0px;
+                                        position: relative; top: 0px" Width="800px">
+                                        <asp:Label ID="dwQ_aec02_code_t" runat="server" CssClass="D" ForeColor="Blue" Height="16px"
+                                            Style="z-index: 101; left: 272px; position: absolute; top: 8px" Width="80px">志工隊：</asp:Label>
+                                        <asp:Label ID="Label1" runat="server" CssClass="D" ForeColor="Blue" Style="z-index: 101;
+                                            left: 16px; position: absolute; top: 8px" Width="80px">樣板名稱：</asp:Label>
+                                        &nbsp;&nbsp;
+                                        <asp:Button ID="bt_Query" runat="server" CssClass="B" Style="z-index: 114; left: 534px;
+                                            position: absolute; top: 7px" Text="查詢" Width="56px" />
+                                        &nbsp;
+                                        <asp:TextBox ID="TextBox1" runat="server" Style="left: 96px; position: absolute;
+                                            top: 8px" Width="128px"></asp:TextBox>
+                                        &nbsp;
+                                        <asp:DropDownList ID="DropDownList7" runat="server" Style="left: 360px; position: absolute;
+                                            top: 8px">
+                                            <asp:ListItem>行政志工</asp:ListItem>
+                                            <asp:ListItem>技術志工</asp:ListItem>
+                                            <asp:ListItem>導覽及活動志工</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </witc:DWPanel>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 605px; height: 15px;">
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 55px; width: 605px;">
+                                    &nbsp;<witc:DWPanel ID="dwF" runat="server" CssClass="Form" Height="169px" Style="position: relative;
+                                        left: 0px; top: 0px;" Width="800px">
+                                        <br />
+                                        <asp:RadioButtonList ID="RadioButtonList2" runat="server" RepeatDirection="Horizontal"
+                                            Style="left: 96px; position: absolute; top: 96px">
+                                            <asp:ListItem>辦公室</asp:ListItem>
+                                            <asp:ListItem>魚池</asp:ListItem>
+                                            <asp:ListItem>工作站</asp:ListItem>
+                                            <asp:ListItem>休息室</asp:ListItem>
+                                            <asp:ListItem></asp:ListItem>
+                                        </asp:RadioButtonList>
+                                        <br />
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+                                        <asp:TextBox ID="TextBox9" runat="server" Style="left: 360px; position: absolute;
+                                            top: 96px" Width="70px">一</asp:TextBox>
+                                        <asp:Label ID="Label4" runat="server" CssClass="D" ForeColor="Blue" Height="16px"
+                                            Style="z-index: 101; left: 376px; position: absolute; top: 8px" Width="80px">志工隊：</asp:Label>
+                                        <asp:DropDownList ID="DropDownList1" runat="server" Style="left: 464px; position: absolute;
+                                            top: 8px">
+                                            <asp:ListItem>行政志工</asp:ListItem>
+                                            <asp:ListItem>技術志工</asp:ListItem>
+                                            <asp:ListItem>導覽及活動志工</asp:ListItem>
+                                        </asp:DropDownList>
+                                        <br />
+                                        <br />
+                                        <br />
+                                        &nbsp; &nbsp;&nbsp;<br />
+                                        
+                                        <asp:Label ID="Label2" runat="server" CssClass="D" ForeColor="Blue" Style="z-index: 101;
+                                            left: 16px; position: absolute; top: 104px" Width="80px">報到點：</asp:Label>
+                                        <asp:Label ID="Label12" runat="server" CssClass="D" ForeColor="Blue" Style="z-index: 101;
+                                            left: 16px; position: absolute; top: 128px" Width="80px">需要人數：</asp:Label>
+                                        <asp:Label ID="Label13" runat="server" CssClass="D" ForeColor="Blue" Style="z-index: 101;
+                                            left: 176px; position: absolute; top: 128px" Width="19px">人</asp:Label>
+                                        &nbsp;
+                                        <asp:Label ID="Label7" runat="server" CssClass="D" ForeColor="Blue" Style="z-index: 101;
+                                            left: 16px; position: absolute; top: 48px" Width="80px">時間：</asp:Label>
+                                        &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+                                        &nbsp; &nbsp;&nbsp;
+                                        <asp:TextBox ID="TextBox7" runat="server" Style="left: 320px; position: absolute;
+                                            top: 40px" Width="70px" OnTextChanged="TextBox7_TextChanged"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox8" runat="server" Style="left: 96px; position: absolute;
+                                            top: 128px" Width="70px"></asp:TextBox>
+                                        <asp:Label ID="Label8" runat="server" CssClass="D" ForeColor="Blue" Style="z-index: 101;
+                                            left: 136px; position: absolute; top: 72px" Width="18px">：</asp:Label>
+                                        <asp:Label ID="Label10" runat="server" CssClass="D" ForeColor="Blue" Style="z-index: 101;
+                                            left: 200px; position: absolute; top: 72px" Width="18px">～</asp:Label>
+                                        <asp:TextBox ID="TextBox3" runat="server" Style="left: 96px; position: absolute;
+                                            top: 72px" Width="33px">08</asp:TextBox>
+                                        <asp:TextBox ID="TextBox4" runat="server" Style="left: 160px; position: absolute;
+                                            top: 72px" Width="33px">00</asp:TextBox>
+                                        <asp:Label ID="Label11" runat="server" CssClass="D" ForeColor="Blue" Style="z-index: 101;
+                                            left: 264px; position: absolute; top: 72px" Width="18px">：</asp:Label>
+                                        <asp:TextBox ID="TextBox5" runat="server" Style="left: 224px; position: absolute;
+                                            top: 72px" Width="33px">12</asp:TextBox>
+                                        <asp:TextBox ID="TextBox6" runat="server" Style="left: 288px; position: absolute;
+                                            top: 72px" Width="33px">00</asp:TextBox>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal"
+                                            Style="left: 96px; position: absolute; top: 40px" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged" Width="304px" Height="8px">
+                                            <asp:ListItem>特定日               </asp:ListItem>
+                                            <asp:ListItem Selected="True">每週</asp:ListItem>
+                                        </asp:RadioButtonList>
+                                        <asp:CheckBox ID="CheckBox1" runat="server" ForeColor="Blue" Style="left: 96px; position: absolute;
+                                            top: 144px" Text="是否訂便當" />
+                                        &nbsp;&nbsp;
+                                        <asp:TextBox ID="TextBox2" runat="server" Style="left: 160px; position: absolute;
+                                            top: 40px" Width="70px"></asp:TextBox>
+                                        <asp:Label ID="Label3" runat="server" CssClass="D" ForeColor="Blue" Height="16px"
+                                            Style="z-index: 101; left: 24px; position: absolute; top: 8px" Width="80px">樣板名稱：</asp:Label>
+                                        <asp:TextBox ID="TextBox10" runat="server" Height="8px" Style="left: 104px; position: absolute;
+                                            top: 6px" Width="240px"></asp:TextBox>
+                                    </witc:DWPanel>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 605px; height: 42px;">
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td style="position: relative; height: 9px; width: 605px;">
+                                    <asp:Button ID="Button3" runat="server" CssClass="B" Style="position: relative; left: 360px; top: -38px;"
+                                        Text="新增" Width="55px" />
+                                    <asp:Button ID="Button1" runat="server" CssClass="B" Style="position: relative; left: 360px; top: -38px;"
+                                        Text="修改" Width="55px" />
+                                    <asp:Button ID="Button2" runat="server" CssClass="B" Style="position: relative; left: 360px; top: -38px;"
+                                        Text="刪除" Width="55px" />
+                                    <asp:Button ID="Button5" runat="server" CssClass="B" Style="position: relative; left: 360px; top: -38px;"
+                                        Text="清除" Width="55px" />
+                                 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 4px; width: 605px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 605px;">
+                                    <witc:ScrollGrid ID="dwG" runat="server" AJAXScript="Yes" CssClass="Grid" Height="100px"
+                                        Width="800px">
+                                        <asp:DataGrid ID="dgG" runat="server" AutoGenerateColumns="False" CssClass="Grid"
+                                            OnSelectedIndexChanged="dgG_SelectedIndexChanged" TabIndex="1" Width="780px">
+                                            <SelectedItemStyle CssClass="Grid_Select" />
+                                            <ItemStyle CssClass="Grid_Detail" />
+                                            <HeaderStyle CssClass="Grid_Head" />
+                                            <FooterStyle CssClass="Grid_Footer" />
+                                            <Columns>
+                                                <asp:TemplateColumn HeaderText="序號">
+                                                    <HeaderStyle Width="30px" />
+                                                    <ItemStyle HorizontalAlign="Center" />
+                                                    <ItemTemplate>
+                                                        <asp:LinkButton ID="dwG_seq_c" runat="server" CausesValidation="False" CommandName="Select"
+                                                            TabIndex="-1" Text='<%# Convert.ToInt32(DataBinder.Eval(Container, "ItemIndex")) + 1 %>'>
+                                                        </asp:LinkButton>
+                                                    </ItemTemplate>
+                                                </asp:TemplateColumn>
+                                                <%--	<asp:TemplateColumn HeaderText="勾選">
+										<HeaderStyle Width="30px" />
+										<ItemStyle HorizontalAlign="Center" />
+										<ItemTemplate>
+											<asp:Checkbox ID="dwG_CHECK" runat="server" CausesValidation="False" >
+											</asp:Checkbox>
+										</ItemTemplate>
+									</asp:TemplateColumn>--%>
+                                                <asp:BoundColumn DataField="志工隊" HeaderText="志工隊" SortExpression="志工隊"></asp:BoundColumn>
+                                                <asp:BoundColumn DataField="年" HeaderText="年" SortExpression="年"></asp:BoundColumn>
+                                                <asp:BoundColumn DataField="月" HeaderText="月" SortExpression="月"></asp:BoundColumn>
+                                                <%--<asp:BoundColumn DataField="班次" HeaderText="班次" SortExpression="班次"></asp:BoundColumn>
+                                                <asp:BoundColumn DataField="人次" HeaderText="人次" SortExpression="人次"></asp:BoundColumn>
+                                                <asp:BoundColumn DataField="開放" HeaderText="開放" SortExpression="開放"></asp:BoundColumn>--%>
+                                                <%--<asp:BoundColumn DataField="支票開立日期" HeaderText="支票開立日期" SortExpression="支票開立日期"  ></asp:BoundColumn>	
+									<asp:BoundColumn DataField="受(繳)款人" HeaderText="受(繳)款人" SortExpression="受(繳)款人" ></asp:BoundColumn>	
+									<asp:BoundColumn DataField="支票金額" HeaderText="支票金額" SortExpression="支票金額" ItemStyle-HorizontalAlign="Right"></asp:BoundColumn>	
+									<asp:BoundColumn DataField="支票兌現到期日" HeaderText="支票兌現到期日" SortExpression="支票兌現到期日"  ></asp:BoundColumn>		
+									<asp:BoundColumn DataField="劃線" HeaderText="劃線" SortExpression="劃線" ItemStyle-HorizontalAlign="Center"></asp:BoundColumn>	
+									<asp:BoundColumn DataField="禁背" HeaderText="禁背" SortExpression="禁背" ItemStyle-HorizontalAlign="Center"></asp:BoundColumn>	
+									<asp:BoundColumn DataField="郵寄日期" HeaderText="郵寄日期" SortExpression="郵寄日期" ItemStyle-HorizontalAlign="Right"></asp:BoundColumn>	--%>
+                                            </Columns>
+                                        </asp:DataGrid>
+                                    </witc:ScrollGrid>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 8px; width: 605px;">
+                                </td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+                </div>
+                <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
+                    <ProgressTemplate>
+                        <uc1:u_ProgressShow ID="u_Progress" runat="server" />
+                    </ProgressTemplate>
+                </asp:UpdateProgress>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </form>
+</body>
+</html>

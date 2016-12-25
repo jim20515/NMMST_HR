@@ -1,0 +1,1377 @@
+/* General Style */
+
+/*
+頁面
+*/
+BODY
+{
+	font-family: 新細明體;
+	word-spacing: 0px;
+	letter-spacing: 0px;
+	background: url(../proj_img/Body.gif);
+}
+BODY.Frame
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: 新細明體;
+	word-spacing: 0px;
+	letter-spacing: 0px;
+	background: url(../proj_img/Frame.gif);
+	color: #000000;
+}
+BODY.leftframe
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: 新細明體;
+	word-spacing: 0px;
+	letter-spacing: 0px;
+	background: url(../proj_img/LFrame.gif);
+	color: #000000;
+}
+BODY.rightframe
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: 新細明體;
+	word-spacing: 0px;
+	letter-spacing: 0px;
+	background: url(../proj_img/RFrame.gif);
+	color: #000000;
+}
+BODY.IFrame
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: 新細明體;
+	word-spacing: 0px;
+	letter-spacing: 0px;
+	background: #fff9f2 url(../proj_img/Body.gif);
+	overflow: hidden;
+}
+BODY.DDDW
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: 新細明體;
+	word-spacing: 0px;
+	letter-spacing: 0px;
+	background: #def1ff;
+}
+
+/*
+區域 - Contain
+width: 620px; 616px;
+background-color: #fff9f2;
+*/
+DIV.Frame_Contain
+{
+	padding: 5px;
+	width: 98%;
+	position: absolute;
+	overflow: visible;
+}
+
+/*
+框架欄位 - Progress
+*/
+DIV.Frame_Progress
+{
+	position: absolute;
+	padding: 0 0 0 0;
+	width: 300px;
+	height: 60px;
+	border: solid 3px #4b53b4;
+	text-align: center;
+	vertical-align: middle;
+	background: url(../proj_img/Progress.jpg) no-repeat;
+	color: #4b53b4;
+	font-size: 21px;
+	font-weight: bold;
+	left: 150px;
+}
+
+/*
+表列 - 表格
+*/
+TABLE.Grid
+{
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	border: solid 1px #808080;
+	border-collapse: collapse;
+	background-color: White;
+}
+
+/*
+表列 - 表頭欄位
+*/
+TD.Grid_Head
+{
+	margin: 0 0 0 0;
+	padding: 1 1 1 1;
+	border: solid 1px #808080;
+	font-size: 13px;
+	background-color: #d6e2fd;
+	text-align: center;
+	height: 20px;
+}
+
+TR.Grid_Head
+{
+	margin: 0 0 0 0;
+	padding: 1 1 1 1;
+	border: outset 1px #808080;
+	font-size: 13px;
+	background-color: #d6e2fd;
+	text-align: center;
+	height: 20px;
+}
+
+/*
+表列 - 表身欄位
+*/
+TD.Grid_Detail
+{
+	margin: 0 0 0 0;
+	padding: 1 1 1 1;
+	border: solid 1px #808080;
+	font-size: 13px;
+}
+
+TR.Grid_Detail
+{
+	margin: 0 0 0 0;
+	padding: 1 1 1 1;
+	border: solid 1px #808080;
+	font-size: 13px;
+}
+
+/*
+表列 - 表身欄位(選擇列)
+*/
+TD.Grid_Select
+{
+	margin: 0 0 0 0;
+	padding: 1 1 1 1;
+	border: solid 1px #808080;
+	font-size: 13px;
+	background-color: #ffffc0;
+}
+
+TR.Grid_Select
+{
+	margin: 0 0 0 0;
+	padding: 1 1 1 1;
+	border: outset 1px #808080;
+	font-size: 13px;
+	background-color: #ffffc0;
+}
+
+/*
+表列 - 表尾欄位
+*/
+TD.Grid_Footer
+{
+	margin: 0 0 0 0;
+	padding: 1 1 1 1;
+	border: solid 1px #808080;
+	font-size: 11px;
+}
+
+TR.Grid_Footer
+{
+	margin: 0 0 0 0;
+	padding: 1 1 1 1;
+	border: solid 1px #808080;
+	font-size: 11px;
+}
+
+/*
+一般表單
+*/
+DIV.Form
+{
+	border: solid 1px #c0c0c0;
+}
+
+TD.Form_Head
+{
+	margin: 0 0 0 0;
+	padding: 1 1 1 1;
+	border: solid 0px #808080;
+	font-size: 13px;
+	text-align: right;
+	height: 24px;
+	width: 100px;
+}
+
+TD.Form_Detail
+{
+	margin: 0 0 0 0;
+	padding: 1 1 1 1;
+	border: solid 0px #808080;
+	font-size: 13px;
+	height: 24px;
+	width: 200px;
+}
+
+/*
+查詢表單
+*/
+DIV.Query
+{
+	border: solid 1px #c0c0c0;
+	background-color: #eff7ff;
+}
+
+/*
+查詢表單
+背景色: 淡橘
+*/
+DIV.Insert
+{
+	border: solid 1px #c0c0c0;
+	background-color: #faf0e6;
+}
+
+/*
+表列外框
+背景色: 白
+*/
+DIV.Grid
+{
+	border: solid 1px #c0c0c0;
+	border-style: inset;
+	overflow: auto;
+	background-color: #ffffff;
+}
+
+/*
+Label - 必要輸入
+顏色: 紅~
+*/
+SPAN.N
+{
+	text-align: right;
+	font-size: 13px;
+	color: Red;
+}
+
+DIV.N
+{
+	text-align: right;
+	font-size: 13px;
+	color: Red;
+}
+
+/*
+Label - 唯讀
+顏色: 綠~
+*/
+SPAN.D
+{
+	text-align: right;
+	font-size: 13px;
+	color: Green;
+}
+
+DIV.D
+{
+	text-align: right;
+	font-size: 13px;
+	color: Green;
+}
+
+/*
+Label - 一般輸入
+顏色: 黑
+*/
+SPAN.I
+{
+	text-align: right;
+	font-size: 13px;
+	color: Black;
+}
+
+DIV.I
+{
+	text-align: right;
+	font-size: 13px;
+	color: Black;
+}
+
+/*
+Label - 一般查詢
+顏色: 黑
+*/
+SPAN.Q
+{
+	text-align: right;
+	font-size: 13px;
+	color: Black;
+}
+
+DIV.Q
+{
+	text-align: right;
+	font-size: 13px;
+	color: Black;
+}
+
+/*
+Label - 標頭提示
+顏色: 綠~
+*/
+SPAN.RT
+{
+	font-size: 11px;
+	color: Green ;
+}
+
+DIV.RT
+{
+	font-size: 11px;
+	color: Green ;
+}
+
+/*
+Label - 重要提示
+顏色: 棕
+*/
+SPAN.RI
+{
+	font-size: 13px;
+	color: #505080;
+}
+
+DIV.RI
+{
+	font-size: 13px;
+	color: #8b4513;
+}
+
+/*
+Label - 一般提示
+顏色: 灰
+*/
+SPAN.RG
+{
+	font-size: 13px;
+	color: #696969;
+}
+
+DIV.RG
+{
+	font-size: 13px;
+	color: #696969;
+}
+
+/*
+Label - 版本提示
+顏色: 藍
+*/
+SPAN.RV
+{
+	font-size: 12px;
+	color: Blue;
+	width: 300px;
+	height: 8px;
+	text-align: right;
+}
+
+DIV.RV
+{
+	font-size: 12px;
+	color: Blue;
+	width: 300px;
+	height: 8px;
+	text-align: right;
+}
+
+/*
+INPUT - 一般 (適用 Buttom)
+*/
+INPUT.B
+{
+	border-style: outset;
+	border-width: 1px;
+	background-color: #c0cbdd;
+	font-size: 13px;
+}
+
+/*
+INPUT - 一般 (適用 InputBox, Check, RedioButtom)
+*/
+INPUT.G
+{
+	font-size: 13px;
+}
+
+/*
+INPUT - 一般灰階 (適用 InputBox, Check, RedioButtom)
+*/
+INPUT.GD
+{
+	font-size: 13px;
+	background-color: Silver;
+}
+
+/*
+SPAN - 一般 (適用 Lable)
+*/
+SPAN.G
+{
+	font-size: 13px;
+}
+
+/*
+DIV - 一般 (適用 Lable)
+*/
+DIV.G
+{
+	font-size: 13px;
+}
+
+/*
+A - 一般 (適用 Link)
+*/
+A.G
+{
+	font-size: 13px;
+}
+
+A.D
+{
+	font-size: 13px;
+	color: Blue;
+}
+
+A.D:hover
+{
+	font-size: 13px;
+	color: #ff6633;
+}
+
+A.N
+{
+	font-size: 13px;
+	color: #2233ca;
+	text-decoration: none;
+}
+
+A.N:hover
+{
+	font-size: 13px;
+	color: #ff6633;
+	text-decoration: none;
+}
+
+/*
+SELECT - 一般 (適用 DDW)
+*/
+SELECT.G
+{
+	font-size: 13px;
+}
+
+/*
+SELECT - 一般灰階 (適用 DDW)
+*/
+SELECT.GD
+{
+	font-size: 13px;
+	background-color: Silver;
+}
+
+/*
+TABLE - 一般 (適用 TABLE)
+*/
+TABLE.G
+{
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	font-size: 13px;
+	border-style: none;
+	border-collapse: collapse;
+}
+TABLE.G100
+{
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	font-size: 13px;
+	border-style: none;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+/*
+表列 - 表格:日曆
+邊緣: 0
+填補: 0
+邊框寬度: 實線 1px 灰
+瓦解邊框
+*/
+TABLE.Calendar
+{
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	border: solid 1px CornflowerBlue;
+	border-collapse: collapse;
+	font-family: Verdana;
+	font-size: 8pt;
+}
+
+TD.CTitle
+{
+	margin: 0 0 0 0;
+	padding: 1 2 1 2;
+	color: White;
+	background-color: CornflowerBlue;
+	border: solid 1px CornflowerBlue;
+	height: 20px;
+	font-family: Verdana;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+}
+
+TD.CNextPrew
+{
+	color: White;
+	font-size: 10pt;
+	font-weight: bold;
+	vertical-align: Middle;
+	height: 20px;
+	width: 15%;
+}
+
+TD.CDayHeader
+{
+	margin: 0 0 0 0;
+	padding: 2 2 2 2;
+	color: #0000C0;
+	background-color: #D6E7FC;
+	border: solid 1px CornflowerBlue;
+	height: 1px;
+	width: 100px;
+	text-align: center;
+}
+
+TD.CDay
+{
+	margin: 0 0 0 0;
+	padding: 2 2 2 2;
+	color: #515128;
+	background-color: #FFFFD8;
+	border: solid 1px CornflowerBlue;
+	height: 52px;
+	vertical-align: Top;
+}
+
+TD.CWeekendDay
+{
+	margin: 0 0 0 0;
+	padding: 2 2 2 2;
+	color: #400000;
+	background-color: #FFE7F4;
+	border: solid 1px CornflowerBlue;
+	height: 52px;
+	vertical-align: Top;
+}
+
+TD.COtherMonthDay
+{
+	margin: 0 0 0 0;
+	padding: 2 2 2 2;
+	color: DimGray;
+	background-color: White;
+	border: solid 1px CornflowerBlue;
+	height: 52px;
+	vertical-align: Top;
+}
+
+TD.CTodayDay
+{
+	margin: 0 0 0 0;
+	padding: 2 2 2 2;
+	color: #512700;
+	background-color: #FFD7AA;
+	border: solid 1px CornflowerBlue;
+	height: 52px;
+	vertical-align: Top;
+}
+
+TD.CSelectedDay
+{
+	margin: 0 0 0 0;
+	padding: 2 2 2 2;
+	color: #0000C0;
+	background-color: #D6E7FC;
+	border: solid 1px CornflowerBlue;
+	height: 52px;
+	vertical-align: Top;
+}
+
+TD.CSelector
+{
+	margin: 0 0 0 0;
+	padding: 2 2 2 2;
+	color: #0000C0;
+	background-color: #D6E7FC;
+	border: solid 1px CornflowerBlue;
+}
+
+/*
+表列 - 日曆工作日欄位
+*/
+TD.CW
+{
+	margin: 0 0 0 0;
+	padding: 2 2 2 2;
+	color: #515128;
+	background-color: #FFFFD8;
+	border: solid 1px CornflowerBlue;
+	height: 52px;
+	vertical-align: Top;
+}
+
+/*
+表列 - 日曆國定假日欄位
+*/
+TD.CH1
+{
+	margin: 0 0 0 0;
+	padding: 2 2 2 2;
+	color: #000080;
+	background-color: #D5FFFF;
+	border: solid 1px CornflowerBlue;
+	height: 52px;
+	vertical-align: Top;
+}
+
+/*
+表列 - 日曆臨時假日欄位
+*/
+TD.CH2
+{
+	margin: 0 0 0 0;
+	padding: 2 2 2 2;
+	color: #400080;
+	background-color: #EDDBFF;
+	border: solid 1px CornflowerBlue;
+	height: 52px;
+	vertical-align: Top;
+}
+
+/*
+表列 - 日曆其他假日欄位
+*/
+TD.CH3
+{
+	margin: 0 0 0 0;
+	padding: 2 2 2 2;
+	color: #004000;
+	background-color: #E2FFC6;
+	border: solid 1px CornflowerBlue;
+	height: 52px;
+	vertical-align: Top;
+}
+
+/*
+表列 - 日曆一般欄位
+*/
+TD.CG
+{
+	margin: 0 0 0 0;
+	padding: 2 2 2 2;
+	color: Black;
+	background-color: White;
+	border: solid 1px CornflowerBlue;
+	vertical-align: Top;
+}
+
+/*
+Label - 日曆工作日
+對齊: 置中
+字型: 8pt
+顏色: 黃
+*/
+SPAN.CW
+{
+	text-align: center;
+	font-size: 8pt;
+	color: Blue;
+}
+
+HR.G {
+	color: #CCCCCC;
+	height: 1px;
+}
+
+/*
+表列 - 日曆工作日欄位
+*/
+TR.CW
+{
+	font-size: 11px;
+	color: White;
+	background-color: Blue;
+}
+
+/*
+Label - 日曆工作日
+顏色: 藍
+*/
+SPAN.CW
+{
+	text-align: center;
+	font-size: 11px;
+	color: Blue;
+}
+
+/*
+表列 - 日曆放假日欄位
+顏色: 紅~
+*/
+TR.CH
+{
+	margin: 0 0 0 0;
+	padding: 1 1 1 1;
+	font-size: 11px;
+	color: Red;
+	background-color: #ffddff;
+}
+
+/*
+Label - 日曆放假日
+顏色: 紅~
+*/
+SPAN.CH
+{
+	text-align: center;
+	font-size: 11px;
+	color: Red;
+}
+
+/*
+TABLE - 隱藏
+*/
+TABLE.Hide
+{
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	border-style: none;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+/*
+系統公告
+*/
+A.PM
+{
+	font-size: 12px;
+	color: #8b0000;
+	line-height: 18px;
+	text-decoration: none;
+}
+
+A.PM:hover
+{
+	font-size: 12px;
+	color: red;
+	line-height: 18px;
+	text-decoration: underline;
+}
+
+FONT.PD
+{
+	font-weight: bold;
+	font-size: 13px;
+	color: Green;
+	line-height: 18px;
+}
+
+FONT.PT
+{
+	font-size: 12px;
+	line-height: 18px;
+}
+
+FONT.PC
+{
+	font-size: 12px;
+	line-height: 18px;
+}
+
+A.PC
+{
+	font-size: 12px;
+	color: blue;
+	line-height: 18px;
+	text-decoration: none;
+}
+
+A.PC:hover
+{
+	font-size: 12px;
+	color: blue;
+	line-height: 18px;
+	text-decoration: underline;
+}
+
+FONT.PU
+{
+	font-size: 10px;
+	color: Gray;
+}
+
+/*
+Add
+*/
+SPAN.RH
+{
+	font-size: 13px;
+	color: #990099;
+}
+DIV.RH
+{
+	font-size: 13px;
+	color: #990099;
+}
+
+
+.Bt_Search 
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BQuery_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BQuery_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+.Bt_New
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BInsert_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BInsert_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+.Bt_Del 
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BDelete_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BDelete_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+.Bt_Update
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BMod_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BMod_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+.Bt_Conf
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BConf_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BConf_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+.Bt_VRef
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BVRef_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BVRef_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+.Bt_AddTemp
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BAddTemp_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BAddTemp_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+.Bt_DelAll
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BDelete_wd_all.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BDelete_w_all.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:100px;
+}
+.Bt_EditNList
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BEditNList_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BEditNList_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_Clearn
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BClear_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BClear_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_ToLeft
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BRemoveFromList_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BRemoveFromList_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_ToRight
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BAddInList_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BAddInList_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_ToReset
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BReloadList_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BReloadList_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_Print
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BPrint_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BPrint_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_ManuAdd
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BManuAdd_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BManuAdd_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_SendCard
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BSendCard_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BSendCard_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_SendMessage
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BSendMessage_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BSendMessage_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_SelectFormat
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BSelectFormat_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BSelectFormat_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_Export
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BExport_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BExport_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_Import
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BImport_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BImport_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_Browser
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BBrowser_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BBrowser_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_NewDOrder
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BNewDOrder_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BNewDOrder_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_ApplyOrder
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BApplyOrder_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BApplyOrder_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_VeriDetail
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BVeriDetail_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BVeriDetail_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_VPDetail
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BVPDetail_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BVPDetail_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_Return
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BReturn_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BReturn_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_ToTrash
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BToTrash_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BToTrash_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_ToVeri
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BToVeri_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BToVeri_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_Approve
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BApprove_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BApprove_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_BUGen1
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BBUGen1_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BBUGen1_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_BUGen2
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BBUGen2_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BBUGen2_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_BUGen3
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BBUGen3_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BBUGen3_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_BUGen4
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BBUGen4_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BBUGen4_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_ModandSave
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BModandSave_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BModandSave_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_ViewTDis
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BViewTDis_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BViewTDis_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_DisByMonth
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BDisByMonth_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BDisByMonth_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_AddDisUser
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BAddDisUser_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BAddDisUser_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_AddBUData
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BAddBUData_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BAddBUData_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_ToAcct
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BToAcct_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BToAcct_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_CopyLastYear
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BCopyLastYear_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BCopyLastYear_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_SearchQ
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BSearchQ_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BSearchQ_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_MediaFile
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BMediaFile_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BMediaFile_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_Generate
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BGenerate_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BGenerate_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_GenList
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BGenList_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BGenList_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_ComfTrans
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BComfTrans_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BComfTrans_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_PreCal
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BPreCal_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BPreCal_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+
+.Bt_StMAllocate
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BStMAllocate_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BStMAllocate_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_ConfSend
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BImport_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BBUEdit1_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_Save
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BSave_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BSave_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_AddCatolog
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BAddCatolog_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BAddCatolog_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+
+.Bt_B9001
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/B9001_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/B9001_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_B9002
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/B9002_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/B9002_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_B9003
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/B9003_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/B9003_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_B9004
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/B9004_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/B9004_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_B9005
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/B9005_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/B9005_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_B9006
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/B9006_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/B9006_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_B9007
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/B9007_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/B9007_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_B9008
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/B9008_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/B9008_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+
+
+.Bt_Download
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BDownload_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BDownload_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_Upload
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BUpload_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BUpload_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_Recive
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BRecive_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BRecive_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_PrintList
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BPrintList_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BPrintList_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_ImportLastYear
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BImportLastYear_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BImportLastYear_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_SumbitByDept
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BSumbitByDept_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BSumbitByDept_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+
+.Bt_AddOrder
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BAddOrder_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BAddOrder_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:100px;
+}
+
+.Bt_AddOrder2
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BAddOrder2_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BAddOrder2_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:100px;
+}
+
+.Bt_AddItem
+{
+                     background:expression((this.disabled && this.disabled == true)?"url("+is_rootpath+"proj_img/ButtonImg/BAddItem_wd.gif) 0 0 no-repeat":"url("+is_rootpath+"proj_img/ButtonImg/BAddItem_w.gif) 0 0 no-repeat");
+	border:0;
+	height:30px;
+	width:80px;
+}
+

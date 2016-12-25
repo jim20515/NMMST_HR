@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="d_hme101a_hme101b" targetNamespace="http://tempuri.org/d_hme101a_hme101b.xsd" xmlns:mstns="http://tempuri.org/d_hme101a_hme101b.xsd" xmlns="http://tempuri.org/d_hme101a_hme101b.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="d_hme101a_hme101b" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="d_hme101a_hme101b" msprop:Generator_DataSetName="d_hme101a_hme101b">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="hme101a" msprop:Generator_UserTableName="hme101a" msprop:Generator_RowDeletedName="hme101aRowDeleted" msprop:Generator_TableClassName="hme101aDataTable" msprop:Generator_RowChangedName="hme101aRowChanged" msprop:Generator_RowClassName="hme101aRow" msprop:Generator_RowChangingName="hme101aRowChanging" msprop:Generator_RowEvArgName="hme101aRowChangeEvent" msprop:Generator_RowEvHandlerName="hme101aRowChangeEventHandler" msprop:Generator_TablePropName="hme101a" msprop:Generator_TableVarName="tablehme101a" msprop:Generator_RowDeletingName="hme101aRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="hme101a_psid" msprop:Generator_UserColumnName="hme101a_psid" msprop:Generator_ColumnPropNameInRow="hme101a_psid" msprop:Generator_ColumnVarNameInTable="columnhme101a_psid" msprop:Generator_ColumnPropNameInTable="hme101a_psidColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hme101a_tid" msprop:Generator_UserColumnName="hme101a_tid" msprop:Generator_ColumnPropNameInRow="hme101a_tid" msprop:Generator_ColumnVarNameInTable="columnhme101a_tid" msprop:Generator_ColumnPropNameInTable="hme101a_tidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hme101a_syear" msprop:Generator_UserColumnName="hme101a_syear" msprop:Generator_ColumnPropNameInRow="hme101a_syear" msprop:Generator_ColumnVarNameInTable="columnhme101a_syear" msprop:Generator_ColumnPropNameInTable="hme101a_syearColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hme101a_smonth" msprop:Generator_UserColumnName="hme101a_smonth" msprop:Generator_ColumnPropNameInRow="hme101a_smonth" msprop:Generator_ColumnVarNameInTable="columnhme101a_smonth" msprop:Generator_ColumnPropNameInTable="hme101a_smonthColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hme101a_hrneedno" msprop:Generator_UserColumnName="hme101a_hrneedno" msprop:Generator_ColumnPropNameInRow="hme101a_hrneedno" msprop:Generator_ColumnVarNameInTable="columnhme101a_hrneedno" msprop:Generator_ColumnPropNameInTable="hme101a_hrneednoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hme101a_makeflag" msprop:Generator_UserColumnName="hme101a_makeflag" msprop:Generator_ColumnPropNameInRow="hme101a_makeflag" msprop:Generator_ColumnVarNameInTable="columnhme101a_makeflag" msprop:Generator_ColumnPropNameInTable="hme101a_makeflagColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hme101a_okflag" msprop:Generator_UserColumnName="hme101a_okflag" msprop:Generator_ColumnPropNameInRow="hme101a_okflag" msprop:Generator_ColumnVarNameInTable="columnhme101a_okflag" msprop:Generator_ColumnPropNameInTable="hme101a_okflagColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hme101a_aid" msprop:Generator_UserColumnName="hme101a_aid" msprop:Generator_ColumnPropNameInRow="hme101a_aid" msprop:Generator_ColumnVarNameInTable="columnhme101a_aid" msprop:Generator_ColumnPropNameInTable="hme101a_aidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hme101a_adt" msprop:Generator_UserColumnName="hme101a_adt" msprop:Generator_ColumnPropNameInRow="hme101a_adt" msprop:Generator_ColumnVarNameInTable="columnhme101a_adt" msprop:Generator_ColumnPropNameInTable="hme101a_adtColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hme101a_uid" msprop:Generator_UserColumnName="hme101a_uid" msprop:Generator_ColumnPropNameInRow="hme101a_uid" msprop:Generator_ColumnVarNameInTable="columnhme101a_uid" msprop:Generator_ColumnPropNameInTable="hme101a_uidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hme101a_udt" msprop:Generator_UserColumnName="hme101a_udt" msprop:Generator_ColumnPropNameInRow="hme101a_udt" msprop:Generator_ColumnVarNameInTable="columnhme101a_udt" msprop:Generator_ColumnPropNameInTable="hme101a_udtColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hme101b_pdid" msprop:Generator_UserColumnName="hme101b_pdid" msprop:Generator_ColumnPropNameInRow="hme101b_pdid" msprop:Generator_ColumnVarNameInTable="columnhme101b_pdid" msprop:Generator_ColumnPropNameInTable="hme101b_pdidColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hme101b_psid" msprop:Generator_UserColumnName="hme101b_psid" msprop:Generator_ColumnPropNameInRow="hme101b_psid" msprop:Generator_ColumnVarNameInTable="columnhme101b_psid" msprop:Generator_ColumnPropNameInTable="hme101b_psidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hme101b_sdate" msprop:Generator_UserColumnName="hme101b_sdate" msprop:Generator_ColumnPropNameInRow="hme101b_sdate" msprop:Generator_ColumnVarNameInTable="columnhme101b_sdate" msprop:Generator_ColumnPropNameInTable="hme101b_sdateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hme101b_starttime" msprop:Generator_UserColumnName="hme101b_starttime" msprop:Generator_ColumnPropNameInRow="hme101b_starttime" msprop:Generator_ColumnVarNameInTable="columnhme101b_starttime" msprop:Generator_ColumnPropNameInTable="hme101b_starttimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hme101b_endtime" msprop:Generator_UserColumnName="hme101b_endtime" msprop:Generator_ColumnPropNameInRow="hme101b_endtime" msprop:Generator_ColumnVarNameInTable="columnhme101b_endtime" msprop:Generator_ColumnPropNameInTable="hme101b_endtimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hme101b_hour" msprop:Generator_UserColumnName="hme101b_hour" msprop:Generator_ColumnPropNameInRow="hme101b_hour" msprop:Generator_ColumnVarNameInTable="columnhme101b_hour" msprop:Generator_ColumnPropNameInTable="hme101b_hourColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="hme101b_addtext" msprop:Generator_UserColumnName="hme101b_addtext" msprop:Generator_ColumnPropNameInRow="hme101b_addtext" msprop:Generator_ColumnVarNameInTable="columnhme101b_addtext" msprop:Generator_ColumnPropNameInTable="hme101b_addtextColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hme101b_needno" msprop:Generator_UserColumnName="hme101b_needno" msprop:Generator_ColumnPropNameInRow="hme101b_needno" msprop:Generator_ColumnVarNameInTable="columnhme101b_needno" msprop:Generator_ColumnPropNameInTable="hme101b_neednoColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="hme101b_note" msprop:Generator_UserColumnName="hme101b_note" msprop:Generator_ColumnPropNameInRow="hme101b_note" msprop:Generator_ColumnVarNameInTable="columnhme101b_note" msprop:Generator_ColumnPropNameInTable="hme101b_noteColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hme101b_fooda" msprop:Generator_UserColumnName="hme101b_fooda" msprop:Generator_ColumnPropNameInRow="hme101b_fooda" msprop:Generator_ColumnVarNameInTable="columnhme101b_fooda" msprop:Generator_ColumnPropNameInTable="hme101b_foodaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hme101b_foodb" msprop:Generator_UserColumnName="hme101b_foodb" msprop:Generator_ColumnPropNameInRow="hme101b_foodb" msprop:Generator_ColumnVarNameInTable="columnhme101b_foodb" msprop:Generator_ColumnPropNameInTable="hme101b_foodbColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hme101b_foodct" msprop:Generator_UserColumnName="hme101b_foodct" msprop:Generator_ColumnPropNameInRow="hme101b_foodct" msprop:Generator_ColumnVarNameInTable="columnhme101b_foodct" msprop:Generator_ColumnPropNameInTable="hme101b_foodctColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="hme101b_aid" msprop:Generator_UserColumnName="hme101b_aid" msprop:Generator_ColumnPropNameInRow="hme101b_aid" msprop:Generator_ColumnVarNameInTable="columnhme101b_aid" msprop:Generator_ColumnPropNameInTable="hme101b_aidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hme101b_adt" msprop:Generator_UserColumnName="hme101b_adt" msprop:Generator_ColumnPropNameInRow="hme101b_adt" msprop:Generator_ColumnVarNameInTable="columnhme101b_adt" msprop:Generator_ColumnPropNameInTable="hme101b_adtColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hme101b_uid" msprop:Generator_UserColumnName="hme101b_uid" msprop:Generator_ColumnPropNameInRow="hme101b_uid" msprop:Generator_ColumnVarNameInTable="columnhme101b_uid" msprop:Generator_ColumnPropNameInTable="hme101b_uidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hme101b_udt" msprop:Generator_UserColumnName="hme101b_udt" msprop:Generator_ColumnPropNameInRow="hme101b_udt" msprop:Generator_ColumnVarNameInTable="columnhme101b_udt" msprop:Generator_ColumnPropNameInTable="hme101b_udtColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:hme101a" />
+      <xs:field xpath="mstns:hme101a_psid" />
+      <xs:field xpath="mstns:hme101b_pdid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

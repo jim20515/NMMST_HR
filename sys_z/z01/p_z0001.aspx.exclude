@@ -1,0 +1,222 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="p_z0001.aspx.cs" Inherits="sys_z_z01_p_z0001" %>
+
+<%@ Register Src="../../proj_uctrl/u_DateSelect_ROC.ascx" TagName="u_DateSelect_ROC"
+    TagPrefix="uc1" %>
+<%@ Register Src="../../proj_uctrl/u_BtSet_iduc.ascx" TagName="u_BtSet_iduc" TagPrefix="uc1" %>
+<%@ Register Src="../../proj_uctrl/u_ProgressShow.ascx" TagName="u_ProgressShow"
+    TagPrefix="uc1" %>
+<%@ Import Namespace="WIT.Template.Project" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../../proj_css/s_GeneralStyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <div>
+                    <asp:Panel ID="pn_Contain" runat="server">
+                        <table class="G">
+                            <tr>
+                                <td style="width: 604px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 604px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 99px; width: 604px;">
+                                    <asp:Label ID="Label18" runat="server" ForeColor="Purple" Style="left: 1px; position: relative;
+                                        top: 7px" Text="◎個人基本資料"></asp:Label>
+                                    <asp:Label ID="Label2" runat="server" ForeColor="Purple" Style="left: -87px; position: relative; top: 269px" Text="◎志工相關資料"></asp:Label>
+                                    <witc:DWPanel ID="dwF" runat="server" CssClass="Form" Height="233px" Style="position: relative;
+                                        left: 3px; top: 11px;" Width="700px">
+                                        <asp:Label ID="dwF_hmc101_id_t" runat="server" CssClass="I" Style="z-index: 109;
+                                            left: 8px; position: absolute; top: 7px" Width="111px">成員代碼：</asp:Label>
+                                        <asp:Label ID="dwF_hmc101_id" runat="server" CssClass="G" Style="z-index: 109; left: 121px;
+                                            position: absolute; top: 7px; text-align: left" Width="118px"></asp:Label>
+                                        <asp:Label ID="dwF_hmc101_cname_t" runat="server" CssClass="N" Style="z-index: 109;
+                                            left: 37px; position: absolute; top: 33px" Width="80px">*成員姓名：</asp:Label>
+                                        <asp:Label ID="dwF_hmc101_gent_t" runat="server" CssClass="N" Style="z-index: 109;
+                                            left: 39px; position: absolute; top: 83px" Width="80px">*性別：</asp:Label>
+                                        <asp:Label ID="dwF_hmc101_bday_t" runat="server" CssClass="N" Style="z-index: 109;
+                                            left: 39px; position: absolute; top: 106px" Width="80px">*生日：</asp:Label>
+                                        <asp:Label ID="dwF_hmc101_jobid_t" runat="server" CssClass="I" Style="z-index: 109;
+                                            left: 39px; position: absolute; top: 154px" Width="80px">職業：</asp:Label>
+                                        <asp:Label ID="dwF_hmc101_eduid_t" runat="server" CssClass="I" Style="z-index: 109;
+                                            left: 39px; position: absolute; top: 129px" Width="80px">學歷：</asp:Label>
+                                        <asp:Label ID="dwF_hmc101_addid_t" runat="server" CssClass="I" Style="z-index: 109;
+                                            left: 39px; position: absolute; top: 181px" Width="80px">通訊地址：</asp:Label>
+                                        &nbsp;&nbsp;
+                                        <asp:Label ID="dwF_hmc101_joborg_t" runat="server" CssClass="I"
+                                            Style="z-index: 109; left: 39px; position: absolute; top: 207px" Width="80px">服務單位：</asp:Label>
+                                        &nbsp;
+                                        <asp:Label ID="dwF_hmc101_PhNoW_t" runat="server" CssClass="I" Style="z-index: 109;
+                                            left: 285px; position: absolute; top: 83px" Width="80px">工作電話：</asp:Label>
+                                        <asp:Label ID="dwF_hmc101_PhNoWex_t" runat="server" CssClass="I"
+                                            Style="z-index: 109; left: 488px; position: absolute; top: 83px" Width="40px">分機：</asp:Label>
+                                        <asp:Label ID="dwF_hmc101_PhNoA_t" runat="server" CssClass="I" Style="z-index: 109;
+                                            left: 285px; position: absolute; top: 135px" Width="80px">住址電話：</asp:Label>
+                                        <asp:Label ID="dwF_hmc101_PhNoM_t" runat="server" CssClass="I" Style="z-index: 109;
+                                            left: 285px; position: absolute; top: 158px" Width="80px">行動電話：</asp:Label>
+                                        <br />
+                                        <asp:TextBox ID="dwF_hmc101_cname" runat="server" Style="left: 120px; position: absolute;
+                                            top: 30px" Width="116px"></asp:TextBox>
+                                        <asp:Panel id="dwF_hmc101_bday" style="Z-INDEX: 105; LEFT: 123px; POSITION: absolute; TOP: 103px" runat="server" Width="132px">
+						<uc1:u_DateSelect_ROC id="u_Date1" runat="server"></uc1:u_DateSelect_ROC>
+					</asp:Panel>
+                                        <asp:TextBox ID="dwF_hmc101_joborg" runat="server" Style="left: 123px; position: absolute;
+                                            top: 204px" Width="117px"></asp:TextBox>
+                                        &nbsp; &nbsp;
+                                        &nbsp; &nbsp;&nbsp;
+                                        <asp:TextBox ID="dwF_hmc101_PhNoA" runat="server" Style="left: 365px; position: absolute;
+                                            top: 132px" Width="117px"></asp:TextBox>
+                                        <asp:TextBox ID="dwF_hmc101_PhNoW" runat="server" Style="left: 365px; position: absolute;
+                                            top: 80px" Width="117px"></asp:TextBox>
+                                        <asp:TextBox ID="dwF_hmc101_PhNoWex" runat="server" Style="left: 526px; position: absolute;
+                                            top: 80px" Width="48px"></asp:TextBox>
+                                        <asp:TextBox ID="dwF_hmc101_PhNoM" runat="server" Style="left: 365px; position: absolute;
+                                            top: 155px" Width="117px"></asp:TextBox>
+                                        <asp:TextBox ID="dwF_hmc101_jobtitle" runat="server" Style="left: 365px; position: absolute;
+                                            top: 209px" Width="117px"></asp:TextBox>
+                                        <asp:TextBox ID="dwF_hmc101_addot" runat="server" Style="left: 250px; position: absolute;
+                                            top: 178px" Width="223px"></asp:TextBox>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <asp:TextBox ID="dwF_hmd201_ssn" runat="server" CssClass="G" Style="z-index: 130; left: 120px; position: absolute; top: 57px" Width="116px"></asp:TextBox>
+                                        <asp:Label ID="dwF_hmd201_ssntype_t" runat="server" CssClass="N" Style="z-index: 124; left: 19px; position: absolute; top: 60px" Width="100px">*身分註記種類：</asp:Label>
+                                        <br />
+                                        <asp:RadioButtonList ID="dwF_hmc101_gent" runat="server" RepeatDirection="Horizontal"
+                                            Style="left: 120px; position: relative; top: 47px">
+                                            <asp:ListItem Selected="True" Value="M">男</asp:ListItem>
+                                            <asp:ListItem Value="W">女</asp:ListItem>
+                                        </asp:RadioButtonList>
+                                        <asp:DropDownList ID="dwF_hmc101_jobid" runat="server" Style="left: 123px; position: absolute;
+                                            top: 151px" Width="105px" DataMember="hca204">
+                                        </asp:DropDownList>
+                                        <asp:Label ID="dwF_hmc101_jobtitle_t" runat="server" CssClass="I"
+                                            Style="z-index: 109; left: 285px; position: absolute; top: 213px" Width="80px">職稱：</asp:Label>
+                                        <asp:DropDownList ID="dwF_hmc101_eduid" runat="server" Style="left: 123px; position: absolute;
+                                            top: 126px" Width="105px" DataMember="hca203">
+                                        </asp:DropDownList>
+                                        <asp:DropDownList ID="dwF_hmc101_addid" runat="server" Style="left: 123px; position: absolute;
+                                            top: 178px" Width="127px" DataMember="hca205">
+                                        </asp:DropDownList>
+                                    </witc:DWPanel>
+                                    <br />
+                                    <br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <witc:DWPanel ID="DWPanel1" runat="server" CssClass="Form" Height="271px" Style="left: 0px; position: relative; top: 0px" Width="700px">
+                                        &nbsp; &nbsp;
+                                        <asp:Label ID="dwF_hmd201_tid_t" runat="server" CssClass="N" Style="z-index: 109; left: -6px; position: absolute; top: 13px" Width="112px">希望參加志工隊：</asp:Label>
+                                        &nbsp;&nbsp;
+                                        <asp:Label ID="dwF_hmd201_account_t" runat="server" CssClass="N" Style="z-index: 114; left: 6px; position: absolute; top: 39px" Width="100px">*志工網帳號：</asp:Label>
+                                        <asp:Label ID="Label1" runat="server" CssClass="I" Style="z-index: 114; left: 397px; position: absolute; top: 9px" Width="57px">照片：</asp:Label>
+                                        <asp:TextBox ID="dwF_hmd201_account" runat="server" CssClass="G" Style="z-index: 115; left: 106px; position: absolute; top: 35px" Width="200px"></asp:TextBox>
+                                        &nbsp; &nbsp;
+                                        &nbsp;&nbsp;
+                                        <asp:CheckBoxList ID="CheckBoxList1" runat="server" RepeatDirection="Horizontal" Style="left: 106px; position: absolute; top: 4px">
+                                            <asp:ListItem>技術志工隊</asp:ListItem>
+                                            <asp:ListItem>導覽志工隊</asp:ListItem>
+                                            <asp:ListItem>行政志工隊</asp:ListItem>
+                                        </asp:CheckBoxList>
+                                        &nbsp;&nbsp;&nbsp; &nbsp;
+                                        <asp:Label ID="dwF_hmd201_weburl_t" runat="server" CssClass="I" Style="z-index: 139; left: 6px; position: absolute; top: 60px" Width="100px">個人網站網址：</asp:Label>
+                                        <asp:TextBox ID="dwF_hmd201_weburl" runat="server" CssClass="G" Style="z-index: 140; left: 106px; position: absolute; top: 58px" Width="200px"></asp:TextBox>
+                                        <asp:Label ID="dwF_hmd201_introtext_t" runat="server" CssClass="I" Style="z-index: 144; left: 6px; position: absolute; top: 86px" Width="100px">自我介紹：</asp:Label>
+                                        <asp:TextBox ID="dwF_hmd201_introtext" runat="server" CssClass="G" Style="z-index: 145; left: 106px; position: absolute; top: 82px" Width="264px" Height="72px"></asp:TextBox>
+                                        &nbsp; &nbsp;&nbsp;
+                                        <asp:Label ID="dwF_hmd201_workday_t" runat="server" CssClass="N" Style="z-index: 159; left: 6px; position: absolute; top: 166px" Width="100px">*可值班日期：</asp:Label>
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                                        <table rules="all" style="left: 104px; position: absolute; top: 165px; text-align: center">
+                                            <tr>
+                                                <td style="width: 46px; height: 15px">
+                                                </td>
+                                                <td style="width: 70px; height: 15px; text-align: center">
+                                                    星期一</td>
+                                                <td style="width: 70px; height: 15px; text-align: center">
+                                                    星期二</td>
+                                                <td style="width: 70px; height: 15px">
+                                                    星期三</td>
+                                                <td style="width: 70px; height: 15px">
+                                                    星期四</td>
+                                                <td style="width: 70px; height: 15px">
+                                                    星期五</td>
+                                                <td style="width: 70px; height: 15px">
+                                                    星期六</td>
+                                                <td style="width: 70px; height: 15px">
+                                                    星期日</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 46px; height: 15px">
+                                                    上午</td>
+                                                <td style="height: 15px">
+                                                    <input id="Checkbox1" style="text-align: center" type="checkbox" /></td>
+                                                <td style="height: 15px">
+                                                    <input id="Checkbox3" type="checkbox" /></td>
+                                                <td style="height: 15px">
+                                                    <input id="Checkbox5" type="checkbox" /></td>
+                                                <td style="height: 15px">
+                                                    <input id="Checkbox7" type="checkbox" /></td>
+                                                <td style="height: 15px">
+                                                    <input id="Checkbox9" type="checkbox" /></td>
+                                                <td style="height: 15px">
+                                                    <input id="Checkbox11" type="checkbox" /></td>
+                                                <td style="height: 15px">
+                                                    <input id="Checkbox13" type="checkbox" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 46px; height: 15px">
+                                                    下午</td>
+                                                <td style="height: 15px">
+                                                    <input id="Checkbox2" style="text-align: center" type="checkbox" /></td>
+                                                <td style="height: 15px">
+                                                    <input id="Checkbox4" type="checkbox" /></td>
+                                                <td style="height: 15px">
+                                                    <input id="Checkbox6" type="checkbox" /></td>
+                                                <td style="height: 15px">
+                                                    <input id="Checkbox8" type="checkbox" /></td>
+                                                <td style="height: 15px">
+                                                    <input id="Checkbox10" type="checkbox" /></td>
+                                                <td style="height: 15px">
+                                                    <input id="Checkbox12" type="checkbox" /></td>
+                                                <td style="height: 15px">
+                                                    <input id="Checkbox14" type="checkbox" /></td>
+                                            </tr>
+                                        </table>
+                                        <img src="../../proj_img/pic.bmp" style="left: 457px; width: 143px; position: absolute; top: 10px; height: 145px" />
+                                        <asp:Button ID="Button4" runat="server" CausesValidation="False" CommandName="go" EnableTheming="True" Style="left: 169px; position: relative; top: 31px" Text="檢查" UseSubmitBehavior="False" Width="62px" />
+                                        <asp:Button ID="Button1" runat="server" CausesValidation="False" CommandName="go" EnableTheming="True" Style="left: 416px; position: relative; top: 63px" Text="上傳/更換圖片" UseSubmitBehavior="False" Width="62px" /></witc:DWPanel>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 16px; text-align: center;">
+                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/proj_img/ButtonImg/BConf_w.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 8px">
+                                </td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+                </div>
+                <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
+                    <ProgressTemplate>
+                        <uc1:u_ProgressShow ID="u_Progress" runat="server" />
+                    </ProgressTemplate>
+                </asp:UpdateProgress>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </form>
+</body>
+</html>

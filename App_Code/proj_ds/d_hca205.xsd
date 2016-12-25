@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="d_hca205" targetNamespace="http://tempuri.org/d_hca205.xsd" xmlns:mstns="http://tempuri.org/d_hca205.xsd" xmlns="http://tempuri.org/d_hca205.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="d_hca205" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="d_hca205" msprop:Generator_DataSetName="d_hca205">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="hca205" msprop:Generator_UserTableName="hca205" msprop:Generator_RowDeletedName="hca205RowDeleted" msprop:Generator_TableClassName="hca205DataTable" msprop:Generator_RowChangedName="hca205RowChanged" msprop:Generator_RowClassName="hca205Row" msprop:Generator_RowChangingName="hca205RowChanging" msprop:Generator_RowEvArgName="hca205RowChangeEvent" msprop:Generator_RowEvHandlerName="hca205RowChangeEventHandler" msprop:Generator_TablePropName="hca205" msprop:Generator_TableVarName="tablehca205" msprop:Generator_RowDeletingName="hca205RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="hca205_id" msprop:Generator_UserColumnName="hca205_id" msprop:Generator_ColumnPropNameInRow="hca205_id" msprop:Generator_ColumnVarNameInTable="columnhca205_id" msprop:Generator_ColumnPropNameInTable="hca205_idColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hca205_hca212id" msprop:Generator_UserColumnName="hca205_hca212id" msprop:Generator_ColumnPropNameInRow="hca205_hca212id" msprop:Generator_ColumnVarNameInTable="columnhca205_hca212id" msprop:Generator_ColumnPropNameInTable="hca205_hca212idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hca205_name" msprop:Generator_UserColumnName="hca205_name" msprop:Generator_ColumnPropNameInRow="hca205_name" msprop:Generator_ColumnVarNameInTable="columnhca205_name" msprop:Generator_ColumnPropNameInTable="hca205_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hca205_sort" msprop:Generator_UserColumnName="hca205_sort" msprop:Generator_ColumnPropNameInRow="hca205_sort" msprop:Generator_ColumnVarNameInTable="columnhca205_sort" msprop:Generator_ColumnPropNameInTable="hca205_sortColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="hca205_stop" msprop:Generator_UserColumnName="hca205_stop" msprop:Generator_ColumnPropNameInRow="hca205_stop" msprop:Generator_ColumnVarNameInTable="columnhca205_stop" msprop:Generator_ColumnPropNameInTable="hca205_stopColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hca205_aid" msprop:Generator_UserColumnName="hca205_aid" msprop:Generator_ColumnPropNameInRow="hca205_aid" msprop:Generator_ColumnVarNameInTable="columnhca205_aid" msprop:Generator_ColumnPropNameInTable="hca205_aidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hca205_adt" msprop:Generator_UserColumnName="hca205_adt" msprop:Generator_ColumnPropNameInRow="hca205_adt" msprop:Generator_ColumnVarNameInTable="columnhca205_adt" msprop:Generator_ColumnPropNameInTable="hca205_adtColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hca205_uid" msprop:Generator_UserColumnName="hca205_uid" msprop:Generator_ColumnPropNameInRow="hca205_uid" msprop:Generator_ColumnVarNameInTable="columnhca205_uid" msprop:Generator_ColumnPropNameInTable="hca205_uidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hca205_udt" msprop:Generator_UserColumnName="hca205_udt" msprop:Generator_ColumnPropNameInRow="hca205_udt" msprop:Generator_ColumnVarNameInTable="columnhca205_udt" msprop:Generator_ColumnPropNameInTable="hca205_udtColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:hca205" />
+      <xs:field xpath="mstns:hca205_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

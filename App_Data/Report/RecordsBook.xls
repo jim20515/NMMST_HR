@@ -1,0 +1,484 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>B</Author>
+  <LastAuthor>Chang-Huei</LastAuthor>
+  <LastPrinted>2004-01-06T17:32:22Z</LastPrinted>
+  <Created>2004-01-05T17:00:56Z</Created>
+  <LastSaved>2009-04-08T16:16:50Z</LastSaved>
+  <Company>B</Company>
+  <Version>11.9999</Version>
+ </DocumentProperties>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>6300</WindowHeight>
+  <WindowWidth>11700</WindowWidth>
+  <WindowTopX>120</WindowTopX>
+  <WindowTopY>90</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Size="12"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s21" ss:Name="一般 2">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s22" ss:Name="一般_RecordsBook">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s23" ss:Name="一般_說明">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s24">
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s25">
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Size="12"/>
+   <Interior/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s26">
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Size="11"
+    ss:Color="#FF0000"/>
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s27">
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Size="12"
+    ss:Color="#FF0000"/>
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s30" ss:Parent="s21">
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Size="11"/>
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s33" ss:Parent="s22">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat ss:Format="@"/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s34" ss:Parent="s22">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s35" ss:Parent="s22">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s36" ss:Parent="s22">
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s37" ss:Parent="s22">
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s38" ss:Parent="s22">
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Size="12"
+    ss:Color="#000000"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s40" ss:Parent="s23">
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Size="12"
+    ss:Color="#000000"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s41" ss:Parent="s23">
+   <NumberFormat ss:Format="@"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="紀錄冊發放">
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="1" x:FullColumns="1"
+   x:FullRows="1" ss:StyleID="s24" ss:DefaultColumnWidth="54"
+   ss:DefaultRowHeight="16.5">
+   <Column ss:StyleID="s24" ss:AutoFitWidth="0" ss:Width="74.25"/>
+   <Column ss:StyleID="s24" ss:Width="83.25" ss:Span="1"/>
+   <Column ss:Index="4" ss:StyleID="s24" ss:AutoFitWidth="0" ss:Width="72"
+    ss:Span="2"/>
+   <Column ss:Index="7" ss:StyleID="s24" ss:AutoFitWidth="0" ss:Width="219.75"/>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s25">
+    <Cell ss:StyleID="s26"><Data ss:Type="String">志工姓名</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">身分證或護照</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">紀錄冊發冊別</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">紀錄冊字</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">紀錄冊號</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">發冊日期</Data></Cell>
+    <Cell ss:StyleID="s30"><Data ss:Type="String">備註</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>1</ActiveRow>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+  <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R2C1:R65536C1</Range>
+   <Type>TextLength</Type>
+   <Min>1</Min>
+   <Max>30</Max>
+   <InputTitle>志工姓名</InputTitle>
+   <InputMessage>必填欄位&#10;長度 = 1~30</InputMessage>
+  </DataValidation>
+  <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R2C2:R65536C2</Range>
+   <Type>TextLength</Type>
+   <Min>6</Min>
+   <Max>24</Max>
+   <InputTitle>身分證或護照</InputTitle>
+   <InputMessage>必填欄位&#10;長度=6~24</InputMessage>
+  </DataValidation>
+  <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R2C5:R65536C5</Range>
+   <Type>TextLength</Type>
+   <Min>1</Min>
+   <Max>15</Max>
+   <InputTitle>紀錄冊號</InputTitle>
+   <InputMessage>必填欄位&#10;長度 = 1~15</InputMessage>
+  </DataValidation>
+  <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R2C6:R65536C6</Range>
+   <Type>TextLength</Type>
+   <Min>9</Min>
+   <Max>9</Max>
+   <InputTitle>發證日期</InputTitle>
+   <InputMessage>必填欄位&#10;長度 = 9&#10;形態 = yyy/MM/dd&#10;98年1月1日 = 098/01/01&#10;年 = 3位&#10;月 = 2位&#10;日 = 2位</InputMessage>
+  </DataValidation>
+  <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R2C3:R65536C3</Range>
+   <Type>TextLength</Type>
+   <Min>1</Min>
+   <Max>1</Max>
+   <InputTitle>紀錄冊發證別</InputTitle>
+   <InputMessage>必填欄位&#10;長度 = 1&#10;2 初次&#10;3 換發&#10;4 補發</InputMessage>
+  </DataValidation>
+  <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R2C7:R65536C7</Range>
+   <Type>TextLength</Type>
+   <Min>0</Min>
+   <Max>100</Max>
+   <InputTitle>備註</InputTitle>
+   <InputMessage>長度=0~100</InputMessage>
+  </DataValidation>
+  <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R2C4:R65536C4</Range>
+   <Type>TextLength</Type>
+   <Min>3</Min>
+   <Max>3</Max>
+   <InputTitle>紀錄冊字</InputTitle>
+   <InputMessage>必填欄位&#10;長度 = 3&#10;請參考[代碼_記錄冊字]</InputMessage>
+  </DataValidation>
+ </Worksheet>
+ <Worksheet ss:Name="代碼_紀錄冊發冊別">
+  <Table ss:ExpandedColumnCount="2" ss:ExpandedRowCount="4" x:FullColumns="1"
+   x:FullRows="1" ss:StyleID="s22" ss:DefaultColumnWidth="54"
+   ss:DefaultRowHeight="16.5">
+   <Column ss:StyleID="s33" ss:Width="110.25"/>
+   <Column ss:StyleID="s22" ss:Width="110.25"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s34"><Data ss:Type="String">紀錄冊發證別代碼</Data></Cell>
+    <Cell ss:StyleID="s35"><Data ss:Type="String">紀錄冊發證別名稱</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">初次</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">換發</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">補發</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="代碼_紀錄冊字">
+  <Table ss:ExpandedColumnCount="2" ss:ExpandedRowCount="49" x:FullColumns="1"
+   x:FullRows="1" ss:StyleID="s22" ss:DefaultColumnWidth="54"
+   ss:DefaultRowHeight="16.5">
+   <Column ss:StyleID="s36" ss:Width="96.75"/>
+   <Column ss:StyleID="s22" ss:Width="96.75"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s37"><Data ss:Type="String">紀錄冊字第代碼</Data></Cell>
+    <Cell ss:StyleID="s35"><Data ss:Type="String">紀錄冊字第名稱</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s38"><Data ss:Type="String">001</Data></Cell>
+    <Cell><Data ss:Type="String">綜</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s38"><Data ss:Type="String">010</Data></Cell>
+    <Cell><Data ss:Type="String">內</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s38"><Data ss:Type="String">020</Data></Cell>
+    <Cell><Data ss:Type="String">民</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s38"><Data ss:Type="String">030</Data></Cell>
+    <Cell><Data ss:Type="String">戶</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s38"><Data ss:Type="String">040</Data></Cell>
+    <Cell><Data ss:Type="String">役</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s38"><Data ss:Type="String">050</Data></Cell>
+    <Cell><Data ss:Type="String">社</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s38"><Data ss:Type="String">060</Data></Cell>
+    <Cell><Data ss:Type="String">地</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s38"><Data ss:Type="String">070</Data></Cell>
+    <Cell><Data ss:Type="String">性</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s38"><Data ss:Type="String">080</Data></Cell>
+    <Cell><Data ss:Type="String">家</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s38"><Data ss:Type="String">090</Data></Cell>
+    <Cell><Data ss:Type="String">警</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+    <Cell><Data ss:Type="String">營</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">110</Data></Cell>
+    <Cell><Data ss:Type="String">消</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">113</Data></Cell>
+    <Cell><Data ss:Type="String">防</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">120</Data></Cell>
+    <Cell><Data ss:Type="String">兒</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">130</Data></Cell>
+    <Cell><Data ss:Type="String">外</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">140</Data></Cell>
+    <Cell><Data ss:Type="String">國</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">150</Data></Cell>
+    <Cell><Data ss:Type="String">財</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">160</Data></Cell>
+    <Cell><Data ss:Type="String">教</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">165</Data></Cell>
+    <Cell><Data ss:Type="String">司</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">170</Data></Cell>
+    <Cell><Data ss:Type="String">法</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">180</Data></Cell>
+    <Cell><Data ss:Type="String">經</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">190</Data></Cell>
+    <Cell><Data ss:Type="String">交</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">200</Data></Cell>
+    <Cell><Data ss:Type="String">蒙</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">210</Data></Cell>
+    <Cell><Data ss:Type="String">僑</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">220</Data></Cell>
+    <Cell><Data ss:Type="String">計</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">230</Data></Cell>
+    <Cell><Data ss:Type="String">人</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">240</Data></Cell>
+    <Cell><Data ss:Type="String">新</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s38"><Data ss:Type="String">250</Data></Cell>
+    <Cell><Data ss:Type="String">衛</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">260</Data></Cell>
+    <Cell><Data ss:Type="String">環</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">270</Data></Cell>
+    <Cell><Data ss:Type="String">海</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">280</Data></Cell>
+    <Cell><Data ss:Type="String">陸</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">290</Data></Cell>
+    <Cell><Data ss:Type="String">建</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">300</Data></Cell>
+    <Cell><Data ss:Type="String">稅</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">301</Data></Cell>
+    <Cell><Data ss:Type="String">退</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">302</Data></Cell>
+    <Cell><Data ss:Type="String">輔</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">310</Data></Cell>
+    <Cell><Data ss:Type="String">青</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">320</Data></Cell>
+    <Cell><Data ss:Type="String">原</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">330</Data></Cell>
+    <Cell><Data ss:Type="String">科</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">340</Data></Cell>
+    <Cell><Data ss:Type="String">研</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">350</Data></Cell>
+    <Cell><Data ss:Type="String">農</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">360</Data></Cell>
+    <Cell><Data ss:Type="String">文</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">370</Data></Cell>
+    <Cell><Data ss:Type="String">勞</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">380</Data></Cell>
+    <Cell><Data ss:Type="String">易</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">390</Data></Cell>
+    <Cell><Data ss:Type="String">保</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">400</Data></Cell>
+    <Cell><Data ss:Type="String">程</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">410</Data></Cell>
+    <Cell><Data ss:Type="String">住</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">420</Data></Cell>
+    <Cell><Data ss:Type="String">客</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">430</Data></Cell>
+    <Cell><Data ss:Type="String">體</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="說明">
+  <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="2" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="16.5">
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s40"><Data ss:Type="String">1. [紀錄冊發放]工作表匯入時應放在工作表清單列的第 1個位置</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s41"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">2. </Font><Font
+       html:Color="#FF0000">紅色字</Font><Font html:Color="#000000">為必填欄位</Font></ss:Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

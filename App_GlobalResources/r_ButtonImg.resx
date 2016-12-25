@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bt_AddBUData" xml:space="preserve">
+    <value>新增預算資料</value>
+  </data>
+  <data name="Bt_AddCatolog" xml:space="preserve">
+    <value>新增科目</value>
+  </data>
+  <data name="Bt_AddDisUser" xml:space="preserve">
+    <value>新增分配單位</value>
+  </data>
+  <data name="Bt_AddItem" xml:space="preserve">
+    <value>新增品項</value>
+  </data>
+  <data name="Bt_AddOrder" xml:space="preserve">
+    <value>新增請購(修)單</value>
+  </data>
+  <data name="Bt_AddOrder2" xml:space="preserve">
+    <value>新增動支請示單</value>
+  </data>
+  <data name="Bt_AddTemp" xml:space="preserve">
+    <value>新增樣版</value>
+  </data>
+  <data name="Bt_ApplyOrder" xml:space="preserve">
+    <value>申請單</value>
+  </data>
+  <data name="Bt_Approve" xml:space="preserve">
+    <value>決行</value>
+  </data>
+  <data name="Bt_B9001" xml:space="preserve">
+    <value>年考核表產出</value>
+  </data>
+  <data name="Bt_B9002" xml:space="preserve">
+    <value>離隊</value>
+  </data>
+  <data name="Bt_B9003" xml:space="preserve">
+    <value>歸隊</value>
+  </data>
+  <data name="Bt_B9004" xml:space="preserve">
+    <value>一覽表產出</value>
+  </data>
+  <data name="Bt_B9005" xml:space="preserve">
+    <value>列印服務積效</value>
+  </data>
+  <data name="Bt_B9006" xml:space="preserve">
+    <value>列印隊員名單</value>
+  </data>
+  <data name="Bt_B9007" xml:space="preserve">
+    <value>列印報名清單</value>
+  </data>
+  <data name="Bt_Browser" xml:space="preserve">
+    <value>瀏覽</value>
+  </data>
+  <data name="Bt_BUGen1" xml:space="preserve">
+    <value>產生初編版</value>
+  </data>
+  <data name="Bt_BUGen2" xml:space="preserve">
+    <value>產生部核版</value>
+  </data>
+  <data name="Bt_BUGen3" xml:space="preserve">
+    <value>產生院核版</value>
+  </data>
+  <data name="Bt_BUGen4" xml:space="preserve">
+    <value>產生法定版</value>
+  </data>
+  <data name="Bt_ComfTrans" xml:space="preserve">
+    <value>確認本次流用</value>
+  </data>
+  <data name="Bt_Conf" xml:space="preserve">
+    <value>確定</value>
+  </data>
+  <data name="Bt_CopyLastYear" xml:space="preserve">
+    <value>複製去年預算</value>
+  </data>
+  <data name="Bt_Del" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="Bt_DisByMonth" xml:space="preserve">
+    <value>按月平均分配</value>
+  </data>
+  <data name="Bt_DisByQuarter" xml:space="preserve">
+    <value>按季平均分配</value>
+  </data>
+  <data name="Bt_Download" xml:space="preserve">
+    <value>下載</value>
+  </data>
+  <data name="Bt_EditNList" xml:space="preserve">
+    <value>編輯名單</value>
+  </data>
+  <data name="Bt_Export" xml:space="preserve">
+    <value>匯出</value>
+  </data>
+  <data name="Bt_Generate" xml:space="preserve">
+    <value>產製</value>
+  </data>
+  <data name="Bt_GenList" xml:space="preserve">
+    <value>產製清冊</value>
+  </data>
+  <data name="Bt_Import" xml:space="preserve">
+    <value>匯入</value>
+  </data>
+  <data name="Bt_ImportLastYear" xml:space="preserve">
+    <value>匯入去年資料</value>
+  </data>
+  <data name="Bt_ManuAdd" xml:space="preserve">
+    <value>手動補登</value>
+  </data>
+  <data name="Bt_MediaFile" xml:space="preserve">
+    <value>轉出媒體檔</value>
+  </data>
+  <data name="Bt_ModandSave" xml:space="preserve">
+    <value>修改後儲存</value>
+  </data>
+  <data name="Bt_New" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="Bt_NewDOrder" xml:space="preserve">
+    <value>新增動支單</value>
+  </data>
+  <data name="Bt_PreCal" xml:space="preserve">
+    <value>試算</value>
+  </data>
+  <data name="Bt_Print" xml:space="preserve">
+    <value>列印</value>
+  </data>
+  <data name="Bt_PrintList" xml:space="preserve">
+    <value>清冊列印</value>
+  </data>
+  <data name="Bt_Recive" xml:space="preserve">
+    <value>支出憑證</value>
+  </data>
+  <data name="Bt_Return" xml:space="preserve">
+    <value>退件</value>
+  </data>
+  <data name="Bt_Save" xml:space="preserve">
+    <value>存檔</value>
+  </data>
+  <data name="Bt_SendCard" xml:space="preserve">
+    <value>傳送賀卡</value>
+  </data>
+  <data name="Bt_SendMessage" xml:space="preserve">
+    <value>傳送簡訊</value>
+  </data>
+  <data name="Bt_StMAllocate" xml:space="preserve">
+    <value>開始月分配作業</value>
+  </data>
+  <data name="Bt_SumbitByDept" xml:space="preserve">
+    <value>組室送出</value>
+  </data>
+  <data name="Bt_ToAcct" xml:space="preserve">
+    <value>送會計室審查</value>
+  </data>
+  <data name="Bt_ToLeft" xml:space="preserve">
+    <value>移出清單</value>
+  </data>
+  <data name="Bt_ToReset" xml:space="preserve">
+    <value>重置清單</value>
+  </data>
+  <data name="Bt_ToRight" xml:space="preserve">
+    <value>加入清單</value>
+  </data>
+  <data name="Bt_ToTrash" xml:space="preserve">
+    <value>作廢</value>
+  </data>
+  <data name="Bt_ToVeri" xml:space="preserve">
+    <value>送審</value>
+  </data>
+  <data name="Bt_Update" xml:space="preserve">
+    <value>修改</value>
+  </data>
+  <data name="Bt_Upload" xml:space="preserve">
+    <value>上傳</value>
+  </data>
+  <data name="Bt_VeriDetail" xml:space="preserve">
+    <value>核銷明細</value>
+  </data>
+  <data name="Bt_ViewTDis" xml:space="preserve">
+    <value>總分配數檢視</value>
+  </data>
+  <data name="Bt_VRef" xml:space="preserve">
+    <value>志願參考表</value>
+  </data>
+</root>

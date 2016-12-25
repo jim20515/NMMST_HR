@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="d_hlg203" targetNamespace="http://tempuri.org/d_hlg203.xsd" xmlns:mstns="http://tempuri.org/d_hlg203.xsd" xmlns="http://tempuri.org/d_hlg203.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="d_hlg203" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="d_hlg203" msprop:Generator_DataSetName="d_hlg203">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="hlg203" msprop:Generator_UserTableName="hlg203" msprop:Generator_RowDeletedName="hlg203RowDeleted" msprop:Generator_TableClassName="hlg203DataTable" msprop:Generator_RowChangedName="hlg203RowChanged" msprop:Generator_RowClassName="hlg203Row" msprop:Generator_RowChangingName="hlg203RowChanging" msprop:Generator_RowEvArgName="hlg203RowChangeEvent" msprop:Generator_RowEvHandlerName="hlg203RowChangeEventHandler" msprop:Generator_TablePropName="hlg203" msprop:Generator_TableVarName="tablehlg203" msprop:Generator_RowDeletingName="hlg203RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="hlg203_kid" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="hlg203_kid" msprop:Generator_ColumnPropNameInRow="hlg203_kid" msprop:Generator_ColumnVarNameInTable="columnhlg203_kid" msprop:Generator_ColumnPropNameInTable="hlg203_kidColumn" type="xs:decimal" />
+              <xs:element name="hlg203_vid" msprop:Generator_UserColumnName="hlg203_vid" msprop:Generator_ColumnPropNameInRow="hlg203_vid" msprop:Generator_ColumnVarNameInTable="columnhlg203_vid" msprop:Generator_ColumnPropNameInTable="hlg203_vidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hlg203_metalname" msprop:Generator_UserColumnName="hlg203_metalname" msprop:Generator_ColumnPropNameInRow="hlg203_metalname" msprop:Generator_ColumnVarNameInTable="columnhlg203_metalname" msprop:Generator_ColumnPropNameInTable="hlg203_metalnameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hlg203_mdate" msprop:Generator_UserColumnName="hlg203_mdate" msprop:Generator_ColumnPropNameInRow="hlg203_mdate" msprop:Generator_ColumnVarNameInTable="columnhlg203_mdate" msprop:Generator_ColumnPropNameInTable="hlg203_mdateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hlg203_appno" msprop:Generator_UserColumnName="hlg203_appno" msprop:Generator_ColumnPropNameInRow="hlg203_appno" msprop:Generator_ColumnVarNameInTable="columnhlg203_appno" msprop:Generator_ColumnPropNameInTable="hlg203_appnoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hlg203_app_date" msprop:Generator_UserColumnName="hlg203_app_date" msprop:Generator_ColumnPropNameInRow="hlg203_app_date" msprop:Generator_ColumnVarNameInTable="columnhlg203_app_date" msprop:Generator_ColumnPropNameInTable="hlg203_app_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hlg203_aid" msprop:Generator_UserColumnName="hlg203_aid" msprop:Generator_ColumnPropNameInRow="hlg203_aid" msprop:Generator_ColumnVarNameInTable="columnhlg203_aid" msprop:Generator_ColumnPropNameInTable="hlg203_aidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hlg203_adt" msprop:Generator_UserColumnName="hlg203_adt" msprop:Generator_ColumnPropNameInRow="hlg203_adt" msprop:Generator_ColumnVarNameInTable="columnhlg203_adt" msprop:Generator_ColumnPropNameInTable="hlg203_adtColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hlg203_uid" msprop:Generator_UserColumnName="hlg203_uid" msprop:Generator_ColumnPropNameInRow="hlg203_uid" msprop:Generator_ColumnVarNameInTable="columnhlg203_uid" msprop:Generator_ColumnPropNameInTable="hlg203_uidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hlg203_udt" msprop:Generator_UserColumnName="hlg203_udt" msprop:Generator_ColumnPropNameInRow="hlg203_udt" msprop:Generator_ColumnVarNameInTable="columnhlg203_udt" msprop:Generator_ColumnPropNameInTable="hlg203_udtColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:hlg203" />
+      <xs:field xpath="mstns:hlg203_kid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

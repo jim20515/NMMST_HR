@@ -1,0 +1,93 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" CodeFile="p_z0101.aspx.cs" Inherits="sys_z_z01_p_z0101" %>
+
+<%--<%@ Register Src="../u_e_month_view.ascx" TagName="u_e_month_view" TagPrefix="uc2" %>
+--%><%@ Register Src="../../proj_uctrl/u_BtSet_iduc.ascx" TagName="u_BtSet_iduc" TagPrefix="uc1" %>
+<%@ Register Src="../../proj_uctrl/u_ProgressShow.ascx" TagName="u_ProgressShow" TagPrefix="uc1" %>
+<%@ Register Src="../../proj_uctrl/u_DateSelect_ROC.ascx" TagName="u_DateSelect_ROC" TagPrefix="uc1" %>
+<%@ Register TagPrefix="uc1" TagName="u_TimeSelect" Src="../../proj_uctrl/u_TimeSelect.ascx" %>
+<%@ Import Namespace="WIT.Template.Project" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>班表需求設定</title>
+    <link href="../../proj_css/s_GeneralStyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <div>
+                    <asp:Panel ID="pn_Contain" runat="server">
+                        <table class="G">
+                            <tr>
+                                <td style="height: 8px">
+                                    <img src="../z0101.gif" />
+                                    <asp:Label ID="Label1" runat="server" CssClass="d" ForeColor="Blue" Style="z-index: 101; left: 311px; position: absolute; top: 239px" Width="70px">★ 魚池(3)</asp:Label>
+                                    <asp:Label ID="Label2" runat="server" CssClass="I" Style="z-index: 101; left: 311px; position: absolute; top: 254px" Width="56px">08:00~10:00</asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <witc:DWPanel ID="dwF" runat="server" CssClass="Form" Height="230px" Style="position: relative; left: 0px; top: 0px;" Width="820px">
+                                        &nbsp;
+                                        <asp:Label ID="dwF_hme101b_sdate_t" runat="server" CssClass="D" Style="z-index: 101; left: 14px; position: absolute; top: 32px" Width="80px">日期：</asp:Label>
+                                        <asp:Label ID="Label6" runat="server" CssClass="i" Style="z-index: 101; left: 100px; position: absolute; top: 32px" Width="80px">098/02/22</asp:Label>
+                                        <asp:Label ID="Label4" runat="server" CssClass="i" Style="z-index: 101; left: 100px; position: absolute; top: 88px" Width="80px">魚池</asp:Label>
+                                        &nbsp; &nbsp;&nbsp;
+                                        <asp:Label ID="dwF_time_t" runat="server" CssClass="D" Style="z-index: 101; left: 14px; position: absolute; top: 62px" Width="80px">時間：</asp:Label>
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        <asp:Label ID="dwF_hme101b_addtext_t" runat="server" CssClass="D" Style="z-index: 101; left: 14px; position: absolute; top: 88px" Width="80px">報到點：</asp:Label>
+                                        &nbsp; &nbsp; &nbsp;
+                                        <asp:Label ID="dwF_hme101b_needno_t" runat="server" CssClass="D" Style="z-index: 101; left: 14px; position: absolute; top: 113px" Width="80px">需要人數：</asp:Label>
+                                        <asp:Label ID="dwF_needno_t" runat="server" Style="z-index: 101; left: 100px; position: absolute; top: 113px" Width="19px">3人</asp:Label>
+                                        <asp:Label ID="Label8" runat="server" Style="z-index: 101; left: 101px; position: absolute; top: 194px" Width="81px">★不提供午餐</asp:Label>
+                                        <asp:Label ID="Label7" runat="server" Height="56px" Style="z-index: 101; left: 100px; position: absolute; top: 137px" Width="267px">這個工作 說起來有點難度 但也不會太難 石斑魚有時候因為太大隻懶的動  所以要注意每隻都要餵食到  </asp:Label>
+                                        &nbsp;
+                                        <asp:Label ID="Label3" runat="server" Style="z-index: 101; left: 100px; position: absolute; top: 62px" Width="97px">08：00 ～12：00</asp:Label>
+                                        &nbsp; &nbsp;
+                                        <asp:Label ID="dwF_hme101b_note_t" runat="server" CssClass="D" Style="z-index: 101; left: 14px; position: absolute; top: 137px" Width="80px">工作說明：</asp:Label>
+                                        &nbsp; &nbsp; &nbsp;&nbsp;
+                                        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/proj_img/ButtonImg/Iwantthisone.png" Style="left: 405px; position: absolute; top: 122px" />
+                                        <asp:Label ID="Label5" runat="server" ForeColor="#C04000" Style="left: 407px; position: absolute; top: 163px" Text="PS. 排班並不代表已預訂，以正式班表為準"></asp:Label>
+                                    </witc:DWPanel>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 4px; text-align: center;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 18px; text-align: center">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 4px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                  <%--  <uc2:u_e_month_view ID="u_Show" runat="server" />--%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 8px">
+                                </td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+                </div>
+                <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
+                    <ProgressTemplate>
+                        <uc1:u_ProgressShow ID="u_Progress" runat="server" />
+                    </ProgressTemplate>
+                </asp:UpdateProgress>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </form>
+</body>
+</html>
