@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE Dbcfg [
+	<!ELEMENT Dbcfg (cfg)*>
+	<!ATTLIST Dbcfg CacheDurationMin CDATA #REQUIRED>
+	<!ATTLIST Dbcfg Comment CDATA #REQUIRED>
+	<!ELEMENT cfg ANY>
+	<!ATTLIST cfg ID ID #REQUIRED>
+	<!ATTLIST cfg Cache CDATA #REQUIRED>
+	<!ATTLIST cfg Comment CDATA #REQUIRED>
+	<!ATTLIST cfg Member CDATA #REQUIRED>
+	<!ATTLIST cfg ValueField CDATA #REQUIRED>
+	<!ATTLIST cfg TextField CDATA #REQUIRED>
+	<!ATTLIST cfg SortField CDATA #REQUIRED>
+	<!ATTLIST cfg TextFormat CDATA #REQUIRED>
+	<!ATTLIST cfg SelectSQL CDATA #REQUIRED>
+]>
+<Dbcfg CacheDurationMin="10" Comment="預設為去空白,除非特殊情況">
+	<cfg ID="sys01"		Cache="Y"	Comment="群組(name with id)"		Member="sys01"		ValueField="s01_grp_id"			TextField="s01_grp_name_c"		SortField="s01_grp_name_c"								TextFormat=""	SelectSQL="SELECT s01_grp_id = RTrim(Convert(varchar(10), s01_grp_id)), s01_grp_name_c = '【' + RTrim(Convert(varchar(10), s01_grp_id)) + '】' + s01_grp_name FROM sys01 WHERE (1 = 1)"></cfg>
+	<cfg ID="sys04"		Cache="Y"	Comment="操作(PK相加,不去空白)"		Member="sys04"		ValueField="s04_pk_c"			TextField="s04_func_text"		SortField="s04_func_seq"								TextFormat=""	SelectSQL="SELECT s04_pk_c = s04_sys_id + s04_func_id, * FROM sys04 WHERE (1 = 1)"></cfg>
+	<cfg ID="sys04_p"	Cache="Y"	Comment="操作(Parent,name with id)"	Member="sys04"		ValueField="s04_pk_c"			TextField="s04_func_text_c"		SortField="s04_func_seq"								TextFormat=""	SelectSQL="SELECT s04_pk_c = RTrim(Convert(varchar(10), s04_sys_id)) + RTrim(Convert(varchar(10), s04_func_id)), s04_func_text_c = '【' + RTrim(Convert(varchar(10), s04_sys_id)) + RTrim(Convert(varchar(10), s04_func_id)) + '】' + s04_func_text, s04_sys_id, s04_func_flag, s04_func_seq FROM sys04 WHERE (1 = 1)"></cfg>
+	<cfg ID="sys04_f"	Cache="Y"	Comment="操作(Func,不去空白)"		Member="sys04"		ValueField="s04_func_seq"		TextField="s04_func_text"		SortField="s04_func_seq"								TextFormat=""	SelectSQL="SELECT * FROM sys04 WHERE (s04_func_flag = 'Y')"></cfg>
+	<cfg ID="sys04_pn"	Cache="Y"	Comment="父層操作(Parent, PK相加)"	Member="sys04"		ValueField="s04_pk_c"			TextField="s04_func_text_c"		SortField="s04_pk_c"									TextFormat=""	SelectSQL="SELECT s04_pk_c = RTrim(Convert(varchar(10), s04_sys_id)) + RTrim(Convert(varchar(10), s04_func_id)), s04_func_text_c = s04_func_text + '–' FROM sys04 WHERE (s04_func_flag = 'N')"></cfg>
+	<cfg ID="sys05"		Cache="Y"	Comment="系統(name with id)"		Member="sys05"		ValueField="s05_sys_id"			TextField="s05_sys_text_c"		SortField="s05_sys_id"									TextFormat=""	SelectSQL="SELECT s05_sys_id = RTrim(Convert(varchar(10), s05_sys_id)), s05_sys_text_c = '【' + RTrim(Convert(varchar(10), s05_sys_id)) + '】' + s05_sys_text FROM sys05 WHERE (1 = 1)"></cfg>
+	<cfg ID="sys06"		Cache="Y"	Comment="模組(name with id)"		Member="sys06"		ValueField="s06_mod_id"			TextField="s06_mod_text_c"		SortField="s06_mod_text_c"								TextFormat=""	SelectSQL="SELECT s06_mod_id = RTrim(Convert(varchar(1), s06_mod_id)), s06_mod_text_c = '【' + s06_mod_id + '】' + s06_mod_text FROM sys06 WHERE (1 = 1)"></cfg>
+	<cfg ID="user01"	Cache="Y"	Comment="使用者(name with id)"		Member="user01"		ValueField="user01_id"			TextField="user01_name_c"		SortField="user01_id"									TextFormat=""	SelectSQL="SELECT user01_id = RTrim(Convert(varchar(10), user01_id)), user01_name_c = '【' + RTrim(Convert(varchar(10), user01_id)) + '】' + user01_name, user01_dept FROM user01 WHERE (1 = 1)"></cfg>
+	<cfg ID="user01_s"	Cache="Y"	Comment="使用者"					Member="user01"		ValueField="user01_id"			TextField="user01_name"			SortField="user01_id"									TextFormat=""	SelectSQL="SELECT user01_id = RTrim(Convert(varchar(10), user01_id)), user01_name, user01_dept FROM user01 WHERE (1 = 1)"></cfg>
+	<cfg ID="hca201" Cache="Y" Comment="人員類別" Member="hca201" ValueField="hca201_id" TextField="hca201_name" SortField="hca201_id" TextFormat="" SelectSQL="SELECT hca201_name, hca201_id FROM hca201 WHERE IsNull(hca201_stop,'N') ='N'"></cfg>
+	<cfg ID="hca202" Cache="Y" Comment="員工部門" Member="hca202" ValueField="hca202_id" TextField="hca202_name" SortField="hca202_id" TextFormat="" SelectSQL="SELECT hca202_name, hca202_id FROM hca202 WHERE IsNull(hca202_stop,'N') ='N'"></cfg>
+	<cfg ID="hca203" Cache="Y" Comment="學歷" Member="hca203" ValueField="hca203_id" TextField="hca203_name" SortField="hca203_id" TextFormat="" SelectSQL="SELECT hca203_name, hca203_id FROM hca203 WHERE IsNull(hca203_stop,'N') ='N'"></cfg>
+	<cfg ID="hca204" Cache="Y" Comment="職業" Member="hca204" ValueField="hca204_id" TextField="hca204_name" SortField="hca204_id" TextFormat="" SelectSQL="SELECT hca204_name, hca204_id FROM hca204 WHERE IsNull(hca204_stop,'N') ='N'"></cfg>
+	<cfg ID="hca205" Cache="Y" Comment="通訊地址" Member="hca205" ValueField="hca205_id" TextField="hca205_name" SortField="hca205_id" TextFormat="" SelectSQL="SELECT hca205_name, hca205_id FROM hca205 WHERE IsNull(hca205_stop,'N') ='N'"></cfg>
+	<cfg ID="hca206" Cache="Y" Comment="志工階級" Member="hca206" ValueField="hca206_id" TextField="hca206_name" SortField="hca206_id" TextFormat="" SelectSQL="SELECT hca206_name, hca206_id FROM hca206 WHERE IsNull(hca206_stop,'N') ='N'"></cfg>
+	<cfg ID="hca207" Cache="Y" Comment="志工狀態" Member="hca207" ValueField="hca207_id" TextField="hca207_name" SortField="hca207_id" TextFormat="" SelectSQL="SELECT hca207_name, hca207_id FROM hca207 WHERE IsNull(hca207_stop,'N') ='N'"></cfg>
+	<cfg ID="hca208" Cache="Y" Comment="離隊原因" Member="hca208" ValueField="hca208_id" TextField="hca208_name" SortField="hca208_id" TextFormat="" SelectSQL="SELECT hca208_name, hca208_id FROM hca208 WHERE IsNull(hca208_stop,'N') ='N'"></cfg>
+	<cfg ID="hca209" Cache="Y" Comment="報到點" Member="hca209" ValueField="hca209_id" TextField="hca209_name" SortField="hca209_id" TextFormat="" SelectSQL="SELECT hca209_name, hca209_id FROM hca209 WHERE IsNull(hca209_stop,'N') ='N'"></cfg>
+	<cfg ID="hca210" Cache="Y" Comment="費用金額" Member="hca210" ValueField="hca210_id" TextField="hca210_cname" SortField="hca210_id" TextFormat="" SelectSQL="SELECT hca210_cname=(hca210_name + '(NTD.' + CAST(hca210_cost as varchar(10))+ ')'), hca210_id FROM hca210 WHERE IsNull(hca210_stop,'N') ='N'"></cfg>
+	<cfg ID="hmd101" Cache="Y" Comment="志工隊" Member="hmd101" ValueField="hmd101_tid" TextField="hmd101_tname" SortField="hmd101_tid" TextFormat="" SelectSQL="SELECT hmd101_tname, hmd101_tid FROM hmd101 WHERE IsNull(hmd101_stop,'N') ='N'"></cfg>
+	<cfg ID="hmd201" Cache="Y" Comment="志工人員" Member="hmd201" ValueField="hmd201_vid" TextField="hmd201_cname" SortField="hmd201_cname" TextFormat="" SelectSQL="SELECT hmd201_cname = RTrim(Convert(varchar(20), hmd201_cname)) , hmd201_vid FROM hmd201 WHERE ( 1 = 1 ) "></cfg>
+	<cfg ID="hme105a" Cache="Y" Comment="排班樣版" Member="hme105a" ValueField="hme105a_ssid" TextField="hme105a_name" SortField="hme105a_ssid" TextFormat="" SelectSQL="SELECT hme105a_name, hme105a_ssid , hme105a_tid FROM hme105a WHERE (1 = 1) "></cfg>
+	<cfg ID="hmc101" Cache="Y" Comment="人員" Member="hmc101" ValueField="hmc101_id" TextField="hmc101_cname" SortField="hmc101_cname" TextFormat="" SelectSQL="SELECT hmc101_cname, hmc101_id FROM hmc101 WHERE (1=1)"></cfg>
+	<cfg ID="hmc102" Cache="Y" Comment="分類" Member="hmc102" ValueField="hmc102_id" TextField="hmc102_name" SortField="hmc102_id" TextFormat="" SelectSQL="SELECT hmc102_name, hmc102_id FROM hmc102 WHERE (1=1)"></cfg>
+	<cfg ID="hmf101" Cache="Y" Comment="課程" Member="hmf101" ValueField="hmf101_courseid" TextField="hmf101_name" SortField="hmf101_courseid" TextFormat="" SelectSQL="SELECT hmf101_name, hmf101_courseid FROM hmf101 WHERE (1=1)"></cfg>
+	<cfg ID="hmh200" Cache="Y" Comment="賀卡底圖" Member="hmh200" ValueField="hmh200_picurl" TextField="hmh200_text" SortField="hmh200_picurl" TextFormat="" SelectSQL="SELECT hmh200_text, hmh200_cmid , hmh200_picurl FROM hmh200 WHERE (1=1)"></cfg>
+	<cfg ID="hmd201_book" Cache="Y" Comment="志工手冊編號" Member="hmd201" ValueField="hmd201_vid" TextField="hmd201_bookid" SortField="hmd201_bookid" TextFormat="" SelectSQL="SELECT hmd201_bookid = RTrim(Convert(varchar(50), hmd201_bookid)) , hmd201_vid FROM hmd201 WHERE ( 1 = 1 )"></cfg>
+	<cfg ID="hca212" Cache="Y" Comment="縣市" Member="hca212" ValueField="hca212_id" TextField="hca212_name" SortField="hca212_sort" TextFormat="" SelectSQL="SELECT hca212_name, hca212_id,hca212_sort FROM hca212 WHERE IsNull(hca212_stop,'N') ='N'"></cfg>
+	<cfg ID="hca208_c" Cache="Y" Comment="離隊原因" Member="hca208" ValueField="hca208_name" TextField="hca208_name" SortField="hca208_id" TextFormat="" SelectSQL="SELECT hca208_name, hca208_id FROM hca208 WHERE IsNull(hca208_stop,'N') ='N'"></cfg>
+	<cfg ID="hca213" Cache="Y" Comment="服務項目" Member="hca213" ValueField="hca213_id" TextField="hca213_cname" SortField="hca213_sort" TextFormat="" SelectSQL="SELECT * FROM hca213 WHERE IsNull(hca213_stop,'N') ='N'"></cfg>
+	<cfg ID="hca214" Cache="Y" Comment="課程領域" Member="hca214" ValueField="hca214_id" TextField="hca214_cname" SortField="hca214_sort" TextFormat="" SelectSQL="SELECT * FROM hca214 WHERE IsNull(hca214_stop,'N') ='N'"></cfg>
+	<cfg ID="hca215" Cache="Y" Comment="訓練課程種類" Member="hca215" ValueField="hca215_id" TextField="hca215_cname" SortField="hca215_sort" TextFormat="" SelectSQL="SELECT * FROM hca215 WHERE IsNull(hca215_stop,'N') ='N'"></cfg>
+	<!-- 以下為控制項繫結用，需設定 AddSQL 來取出資料（注意：Cache 需設為 N） -->
+	<cfg ID="wr04"		Cache="N"	Comment="例假日"					Member="wr04"		ValueField="r04_date"			TextField="r04_date"			SortField="r04_date"									TextFormat=""	SelectSQL="SELECT r04_date, r04_kind, r04_reason FROM wr04 WHERE (1 = 1)"></cfg>
+</Dbcfg>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="d_hca212" targetNamespace="http://tempuri.org/d_hca212.xsd" xmlns:mstns="http://tempuri.org/d_hca212.xsd" xmlns="http://tempuri.org/d_hca212.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="d_hca212" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="d_hca212" msprop:Generator_DataSetName="d_hca212">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="hca212" msprop:Generator_UserTableName="hca212" msprop:Generator_RowDeletedName="hca212RowDeleted" msprop:Generator_TableClassName="hca212DataTable" msprop:Generator_RowChangedName="hca212RowChanged" msprop:Generator_RowClassName="hca212Row" msprop:Generator_RowChangingName="hca212RowChanging" msprop:Generator_RowEvArgName="hca212RowChangeEvent" msprop:Generator_RowEvHandlerName="hca212RowChangeEventHandler" msprop:Generator_TablePropName="hca212" msprop:Generator_TableVarName="tablehca212" msprop:Generator_RowDeletingName="hca212RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="hca212_id" msprop:Generator_UserColumnName="hca212_id" msprop:Generator_ColumnPropNameInRow="hca212_id" msprop:Generator_ColumnVarNameInTable="columnhca212_id" msprop:Generator_ColumnPropNameInTable="hca212_idColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hca212_name" msprop:Generator_UserColumnName="hca212_name" msprop:Generator_ColumnPropNameInRow="hca212_name" msprop:Generator_ColumnVarNameInTable="columnhca212_name" msprop:Generator_ColumnPropNameInTable="hca212_nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hca212_sort" msprop:Generator_UserColumnName="hca212_sort" msprop:Generator_ColumnPropNameInRow="hca212_sort" msprop:Generator_ColumnVarNameInTable="columnhca212_sort" msprop:Generator_ColumnPropNameInTable="hca212_sortColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="hca212_stop" msprop:Generator_UserColumnName="hca212_stop" msprop:Generator_ColumnPropNameInRow="hca212_stop" msprop:Generator_ColumnVarNameInTable="columnhca212_stop" msprop:Generator_ColumnPropNameInTable="hca212_stopColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hca212_aid" msprop:Generator_UserColumnName="hca212_aid" msprop:Generator_ColumnPropNameInRow="hca212_aid" msprop:Generator_ColumnVarNameInTable="columnhca212_aid" msprop:Generator_ColumnPropNameInTable="hca212_aidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hca212_adt" msprop:Generator_UserColumnName="hca212_adt" msprop:Generator_ColumnPropNameInRow="hca212_adt" msprop:Generator_ColumnVarNameInTable="columnhca212_adt" msprop:Generator_ColumnPropNameInTable="hca212_adtColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hca212_uid" msprop:Generator_UserColumnName="hca212_uid" msprop:Generator_ColumnPropNameInRow="hca212_uid" msprop:Generator_ColumnVarNameInTable="columnhca212_uid" msprop:Generator_ColumnPropNameInTable="hca212_uidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hca212_udt" msprop:Generator_UserColumnName="hca212_udt" msprop:Generator_ColumnPropNameInRow="hca212_udt" msprop:Generator_ColumnVarNameInTable="columnhca212_udt" msprop:Generator_ColumnPropNameInTable="hca212_udtColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:hca212" />
+      <xs:field xpath="mstns:hca212_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

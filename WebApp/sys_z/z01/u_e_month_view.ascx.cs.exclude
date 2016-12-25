@@ -1,0 +1,975 @@
+﻿// *********************************************************************************
+// 1. 程式描述：服務勤務管理–行事曆月曆之 Web 使用者控制項
+// 2. 撰寫人員：demon
+// *********************************************************************************
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Drawing;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using WIT.Template.Project;
+
+/// <summary>
+///	服務勤務管理–行事曆月曆之 Web 使用者控制項
+/// </summary>
+public partial class sys_e_u_e_month_view : WIT.Template.Project.u_BaseControl
+{
+    #region ☆ Declare Events ----------------------------------------- 撰寫人員：demon
+
+    public event MonthChangedEventHandler ue_VisibleMonthChanged;
+
+    /// <summary>委派描述：按下 MyCalendar 某一日期所做的處理事件</summary>
+    public delegate void SelectionHandler(SelectedDatesCollection adta_SelectedDates);
+    /// <summary>事件描述：按下 MyCalendar 某一日期所做的處理事件</summary>
+    public event SelectionHandler ue_SelectionChanged;
+
+    /// <summary>委派描述：按下 編輯 所做的處理事件</summary>
+    public delegate void BtChangedHandler(string as_pdid);
+    /// <summary>事件描述：按下 編輯 做的處理事件</summary>
+    public event BtChangedHandler ue_EventEditChanged;
+
+
+    #endregion
+
+    #region ☆ Declare Controls --------------------------------------- 撰寫人員：demon
+
+    #endregion
+
+    #region ☆ Declare Variables -------------------------------------- 撰寫人員：demon
+
+    /// <summary>變數描述：行事曆資料元件</summary>
+    public ndb_hme101a_hme101b indb_hme101a_hme101b = new ndb_hme101a_hme101b();
+    /// <summary>變數描述：行事曆樣版資料元件</summary>
+    public ndb_hme105a_hme105b indb_hme105a_hme105b = new ndb_hme105a_hme105b();
+    /// <summary>變數描述：需求班次資料元件</summary>
+    //public ndb_hme101b indb_hme101b = new ndb_hme101b();
+    /// <summary>變數描述：班表志願資料元件</summary>
+    public ndb_hme101c indb_hme101c = new ndb_hme101c();
+
+    /// <summary>變數描述：月曆選擇模式</summary>
+    public CalendarSelectionMode i_CalendarSelectionMode;
+
+    /// <summary>變數描述：行事曆顯示模式–月曆(Month)；週曆(Week)</summary>
+    public enum ShowModes { Month, Week };
+    /// <summary>變數描述：行事曆顯示模式–月曆(Month)：預設；週曆(Week)</summary>
+    private ShowModes i_ShowMode = ShowModes.Month;
+
+    #endregion
+
+    #region ☆ Declare Properties ------------------------------------- 撰寫人員：fen
+
+    // =========================================================================
+    // 屬性
+    // =========================================================================
+    /// <summary>屬性描述：行事曆顯示模式–月曆(Month)：預設；週曆(Week)</summary>
+    public ShowModes ShowMode
+    {
+        get
+        {
+            return this.i_ShowMode;
+        }
+
+        set
+        {
+            this.i_ShowMode = value;
+
+            // 顯示行事曆種類
+            MyCalendar.Visible = (this.i_ShowMode == ShowModes.Month ? true : false);
+            MyWeek.Visible = !MyCalendar.Visible;
+            MyShowDate.Visible = !MyCalendar.Visible;
+        }
+    }	// End of Property ShowMode
+
+    // =========================================================================
+    // 屬性
+    // =========================================================================
+    /// <summary>屬性描述：年度（西元年）</summary>
+    public string YearE
+    {
+        get
+        {
+            if (this.ViewState["vs_YearE"] != null)
+                return this.ViewState["vs_YearE"].ToString();
+            else
+                return DateTime.Now.Year.ToString();
+        }
+
+        set
+        {
+            this.ViewState["vs_YearE"] = value;
+        }
+    }	// End of Property YearE
+
+
+    // =========================================================================
+    // 屬性
+    // =========================================================================
+    /// <summary>屬性描述：年度（民國年 3 位）</summary>
+    public string Year
+    {
+        get
+        {
+            if (this.ViewState["vs_Year"] != null)
+                return this.ViewState["vs_Year"].ToString();
+            else
+                return Convert.ToString(DateTime.Now.Year - 1911).PadLeft(3, '0');
+        }
+
+        set
+        {
+            this.ViewState["vs_Year"] = value;
+            this.YearE = Convert.ToString(Convert.ToInt16(value) + 1911);
+        }
+    }	// End of Property Year
+
+
+    // =========================================================================
+    // 屬性
+    // =========================================================================
+    /// <summary>屬性描述：月份（2 位）</summary>
+    public string Month
+    {
+        get
+        {
+            if (this.ViewState["vs_Month"] != null)
+                return this.ViewState["vs_Month"].ToString();
+            else
+                return DateTime.Now.Month.ToString("00");
+        }
+
+        set
+        {
+            this.ViewState["vs_Month"] = value;
+        }
+    }	// End of Property Month
+
+
+    // =========================================================================
+    // 屬性
+    // =========================================================================
+    /// <summary>屬性描述：排班樣版名稱</summary>
+    public string SName
+    {
+        get
+        {
+            if (this.ViewState["vs_SName"] != null)
+                return this.ViewState["vs_SName"].ToString();
+            else
+                return "";
+        }
+
+        set
+        {
+            this.ViewState["vs_SName"] = value;
+        }
+    }	// End of Property Month
+
+    // =========================================================================
+    // 屬性
+    // =========================================================================
+    /// <summary>屬性描述：排班表代碼</summary>
+    public string Tid
+    {
+        get
+        {
+            if (this.ViewState["vs_Tid"] != null)
+                return this.ViewState["vs_Tid"].ToString();
+            else
+                return "";
+        }
+
+        set
+        {
+            this.ViewState["vs_Tid"] = value;
+        }
+    }	// End of Property Month
+
+    // =========================================================================
+    // 屬性
+    // =========================================================================
+    /// <summary>屬性描述：是否唯讀(True,False)，預設False</summary>
+    public string ReadOnly
+    {
+        get
+        {
+            if (this.ViewState["vs_ReadOnly"] != null)
+                return this.ViewState["vs_ReadOnly"].ToString();
+            else
+                return "False";
+        }
+
+        set
+        {
+            this.ViewState["vs_ReadOnly"] = value;
+        }
+    }	// End of Property Month
+
+    // =========================================================================
+    // 屬性
+    // =========================================================================
+    /// <summary>屬性描述：是否顯示人名(True,False)，預設False</summary>
+    public string ShowPeople
+    {
+        get
+        {
+            if (this.ViewState["vs_ShowPeople"] != null)
+                return this.ViewState["vs_ShowPeople"].ToString();
+            else
+                return "False";
+        }
+
+        set
+        {
+            this.ViewState["vs_ShowPeople"] = value;
+        }
+    }	// End of Property Month
+
+    // =========================================================================
+    // 屬性
+    // =========================================================================
+    /// <summary>屬性描述：是否顯示人名(True,False)，預設False</summary>
+    public string CountPeople
+    {
+        get
+        {
+            if (this.ViewState["vs_CountPeople"] != null)
+                return this.ViewState["vs_CountPeople"].ToString();
+            else
+                return "False";
+        }
+
+        set
+        {
+            this.ViewState["vs_CountPeople"] = value;
+        }
+    }	// End of Property Month
+
+    // =========================================================================
+    // 屬性
+    // =========================================================================
+    /// <summary>屬性描述：是否為正式班表(True,False)，預設False</summary>
+    public string OKFlag
+    {
+        get
+        {
+            if (this.ViewState["vs_OKFlag"] != null)
+                return this.ViewState["vs_OKFlag"].ToString();
+            else
+                return "False";
+        }
+
+        set
+        {
+            this.ViewState["vs_OKFlag"] = value;
+        }
+    }	// End of Property Month
+
+
+    #endregion
+
+    // =========================================================================
+    // 事件
+    // =========================================================================
+    /// <summary>
+    /// 事件描述：網頁開啟（在 WebForm 的 Page_Load 之後處理）
+    /// </summary>
+    private void Page_Load(object sender, System.EventArgs e)
+    {
+        // 如果是第一次執行此網頁
+        if (!this.IsPostBack)
+        {
+            // 如果選擇週曆，則初始化
+            if (this.i_ShowMode == ShowModes.Week && MyWeek.Rows.Count == 1)
+                this.uf_BuildWeek(false);
+        }
+
+        // 註冊執行事件（此 2 個控制項是在 Html 自己加的，所以事件寫在這比較保險）
+        this.lbt_Change.Click += new System.EventHandler(this.lbt_Change_Click);
+    }	// End of Page_Load
+
+    #region Web Form Designer generated code
+    override protected void OnInit(EventArgs e)
+    {
+        //
+        // CODEGEN: 此呼叫為 ASP.NET Web Form 設計工具的必要項。
+        //
+        InitializeComponent();
+        base.OnInit(e);
+    }
+
+    /// <summary>
+    /// 此為設計工具支援所必需的方法 - 請勿使用程式碼編輯器修改
+    /// 這個方法的內容。
+    /// </summary>
+    private void InitializeComponent()
+    {
+        this.MyCalendar.DayRender += new System.Web.UI.WebControls.DayRenderEventHandler(this.MyCalendar_DayRender);
+        this.MyCalendar.VisibleMonthChanged += new System.Web.UI.WebControls.MonthChangedEventHandler(this.MyCalendar_VisibleMonthChanged);
+        this.MyCalendar.SelectionChanged += new System.EventHandler(this.MyCalendar_SelectionChanged);
+        this.lbt_Change.Click += new System.EventHandler(this.lbt_Change_Click);
+        this.Load += new System.EventHandler(this.Page_Load);
+
+    }
+    #endregion
+
+    // =========================================================================
+    // 函式
+    // =========================================================================
+    /// <summary>
+    /// 函式描述：利用行事曆資料產生出月曆
+    /// </summary>
+    public void uf_BuildMonth()
+    {
+        MyCalendar.Enabled = true;
+        MyCalendar.SelectionMode = this.i_CalendarSelectionMode;
+        MyCalendar.SelectedDate = new DateTime(1, 1, 1);
+
+        // 顯示月曆
+        if (MyCalendar.VisibleDate.Year != Convert.ToInt16(this.YearE) || MyCalendar.VisibleDate.Month != Convert.ToInt16(this.Month))
+        {
+            MyCalendar.VisibleDate = Convert.ToDateTime(this.YearE + "/" + this.Month + "/01");
+            MyCalendar.ToolTip = this.Year + "年度" + this.Month + "月份排班表";
+        }
+    }	// End of uf_BuildMonth
+
+
+    // =========================================================================
+    // 函式
+    // =========================================================================
+    /// <summary>
+    /// 函式描述：利用行事曆資料產生出週曆
+    /// </summary>
+    public void uf_BuildWeek()
+    {
+        this.uf_BuildWeek(true);
+    }	// End of uf_BuildWeek(1)
+
+    // =========================================================================
+    // 函式
+    // =========================================================================
+    /// <summary>
+    /// 函式描述：利用行事曆資料產生出週曆
+    /// </summary>
+    /// <param name="ab_IsEnabled">是否可以使用–是(true)；否(false)</param>
+    private void uf_BuildWeek(bool ab_IsEnabled)
+    {
+        // ##### 宣告變數 #####
+
+        // 控制項初始化 ------------------------------------------------- ☆
+        for (int li_i = MyWeek.Rows.Count - 1; li_i >= 1; li_i--)
+            MyWeek.Rows.RemoveAt(li_i);
+        MyWeek.Rows.Add(this.uf_BuildWeekTitle());			// 產生標頭列
+        MyWeek.Enabled = ab_IsEnabled;
+        MyShowDate.Enabled = ab_IsEnabled;
+        lb_WeekTitle.Text = this.SName;
+
+        // 在不可以使用的情形下，產生一筆資料列代表即可
+        if (!ab_IsEnabled)
+        {
+            MyWeek.Rows.Add(this.uf_BuildWeekRow());
+            return;
+        }
+
+        // 產生資料列 --------------------------------------------------- ☆
+
+        bool lb_IsHaveEvent = false;
+        TableRow ltr_Row = this.uf_BuildWeekRow(ref lb_IsHaveEvent);
+        //this.uf_BuildWeek_Person(ltr_Row.Cells[0]);
+        MyWeek.Rows.Add(ltr_Row);
+
+        // 如果沒有符合的資料，產生一筆資料列
+        if (MyWeek.Rows.Count == 2)
+            MyWeek.Rows.Add(this.uf_BuildWeekRow());
+
+        //特定日期顯示
+        uf_WeekShow();
+    }	// End of uf_BuildWeek(2)
+
+    // =========================================================================
+    // 函式
+    // =========================================================================
+    /// <summary>
+    /// 函式描述：產生姓名欄位內容
+    /// </summary>
+    /// <param name="atd_Cell">姓名欄位</param>
+    /// <param name="as_EmpNo_PCode">員工代號</param>
+    /// <param name="adrv_wr01">員工資料列</param>
+    private void uf_BuildWeek_Person(TableCell atd_Cell)
+    {
+        atd_Cell.Text = this.SName;
+    }	// End of uf_BuildWeek_Person
+
+    #region ☆ MyWeek Events & Methods -------------------------------- 撰寫人員：fen
+
+    // =========================================================================
+    // 函式
+    // =========================================================================
+    /// <summary>
+    /// 函式描述：產生出週曆標題列
+    /// </summary>
+    /// <returns>新的週曆資料列</returns>
+    private TableRow uf_BuildWeekTitle()
+    {
+        // ##### 宣告變數 #####
+        TableRow ltr_Row = new TableRow();
+
+        // 新增「星期日」→「星期六」欄
+        for (int li_i = 0; li_i <= 6; li_i++)
+        {
+            TableCell ltd_Cell = new TableCell();
+            ltd_Cell.Text = "星期" + "日一二三四五六".Substring(li_i, 1);
+            ltd_Cell.CssClass = "CDayHeader";
+            ltr_Row.Cells.Add(ltd_Cell);
+        }
+
+        return ltr_Row;
+    }	// End of uf_BuildWeekTitle
+
+
+    // =========================================================================
+    // 函式
+    // =========================================================================
+    /// <summary>
+    /// 函式描述：產生出週曆資料列
+    /// </summary>
+    /// <param name="adt_sDate">開始日期(星期日)</param>
+    /// <param name="adt_eDate">結束日期(星期六)</param>
+    /// <param name="as_EmpNo_PCode">員工代號／班表代碼（視顯示依據決定）</param>
+    /// <returns>新的週曆資料列</returns>
+    private TableRow uf_BuildWeekRow()
+    {
+        bool lb_IsHaveEvent = false;
+        return this.uf_BuildWeekRow(ref lb_IsHaveEvent);
+    }	// End of uf_BuildWeekRow(1)
+
+    // =========================================================================
+    // 函式
+    // =========================================================================
+    /// <summary>
+    /// 函式描述：產生出週曆資料列
+    /// </summary>
+    /// <param name="adt_sDate">開始日期(星期日)</param>
+    /// <param name="adt_eDate">結束日期(星期六)</param>
+    /// <param name="as_EmpNo_PCode">員工代號／班表代碼（視顯示依據決定）</param>
+    /// <param name="ab_IsHaveEvent">回傳是否有事件</param>
+    /// <returns>新的週曆資料列</returns>
+    private TableRow uf_BuildWeekRow(ref bool ab_IsHaveEvent)
+    {
+        // ##### 宣告變數 #####
+        TableRow ltr_Row = new TableRow();
+
+        // 新增「星期日」→「星期六」欄
+        for (int li_day = 0; li_day <= 6; li_day ++)
+        {
+            TableCell ltd_Cell = new TableCell();
+            if ("06".IndexOf(li_day.ToString()) >= 0)
+                ltd_Cell.CssClass = "CWeekendDay";
+            else
+                ltd_Cell.CssClass = "CDay";
+
+            this.uf_Dg_DayRender(li_day, ltd_Cell, ref ab_IsHaveEvent);
+            ltr_Row.Cells.Add(ltd_Cell);
+        }
+
+        return ltr_Row;
+    }	// End of uf_BuildWeekRow(2)
+
+    #endregion
+
+    #region ☆ MyCalendar Events -------------------------------------- 撰寫人員：fen
+
+    // =========================================================================
+    // 事件
+    // =========================================================================
+    /// <summary>
+    /// 事件描述：按下 MyCalendar 前後月份所做的處理
+    /// </summary>
+    private void MyCalendar_VisibleMonthChanged(object sender, System.Web.UI.WebControls.MonthChangedEventArgs e)
+    {
+        // 執行事件
+        if (this.ue_VisibleMonthChanged != null)
+            this.ue_VisibleMonthChanged(sender, e);
+    }	// End of MyCalendar_VisibleMonthChanged
+
+
+    // =========================================================================
+    // 事件
+    // =========================================================================
+    /// <summary>
+    /// 事件描述：按下 MyCalendar 某一日期所做的處理
+    /// </summary>
+    private void MyCalendar_SelectionChanged(object sender, System.EventArgs e)
+    {
+        // 執行事件
+        if (this.ue_SelectionChanged != null)
+            this.ue_SelectionChanged(MyCalendar.SelectedDates);
+
+        MyCalendar.SelectedDate = new DateTime(1, 1, 1);
+    }	// End of MyCalendar_SelectionChanged
+
+
+    // =========================================================================
+    // 事件
+    // =========================================================================
+    /// <summary>
+    /// 事件描述：MyCalendar 產生每一個日期所做的處理
+    /// </summary>
+    private void MyCalendar_DayRender(object sender, System.Web.UI.WebControls.DayRenderEventArgs e)
+    {
+        this.uf_Dg_DayRender(e.Day.Date, e.Cell, "");
+    }	// End of MyCalendar_DayRender
+
+    #endregion
+
+    #region ☆ DataGrid Bind Methods ---------------------------------- 撰寫人員：fen
+
+    // =========================================================================
+    // 函式
+    // =========================================================================
+    /// <summary>
+    /// 函式描述：產生每一個日期所做的處理
+    /// </summary>
+    /// <param name="adt_Day">日期</param>
+    /// <param name="atd_Cell">日期欄位</param>
+    /// <param name="as_EmpNo_PCode">員工代號／班表代碼（視顯示依據決定）</param>
+    private void uf_Dg_DayRender(DateTime adt_Day, TableCell atd_Cell, string as_EmpNo_PCode)
+    {
+        bool lb_IsHaveEvent = false;
+        this.uf_Dg_DayRender(adt_Day, atd_Cell, as_EmpNo_PCode, ref lb_IsHaveEvent);
+    }	// End of uf_Dg_DayRender(1)
+
+    // =========================================================================
+    // 函式
+    // =========================================================================
+    /// <summary>
+    /// 函式描述：產生每一個日期所做的處理
+    /// </summary>
+    /// <param name="adt_Day">日期</param>
+    /// <param name="atd_Cell">日期欄位</param>
+    /// <param name="as_EmpNo_PCode">員工代號／班表代碼（視顯示依據決定）</param>
+    /// <param name="ab_IsHaveEvent">回傳是否有事件</param>
+    private void uf_Dg_DayRender(DateTime adt_Day, TableCell atd_Cell, string as_EmpNo_PCode, ref bool ab_IsHaveEvent)
+    {
+        // ##### 宣告變數 #####
+        string ls_Day = adt_Day.ToString("yyyy/MM/dd");
+        string ls_kind = "", ls_show = "", ls_reason = "";
+        string ls_AddFilter = "";
+
+        // 色碼                      黃色       藍色       紫色       綠色       橘色
+        string[] lsa_ForeColor = { "#515128", "#000080", "#400080", "#004000", "#804000" };
+        string[] lsa_BackColor = { "#FFFFD8", "#D5FFFF", "#EDDBFF", "#E2FFC6", "#FFDCB8" };
+
+        // 判斷參數的正確性
+        if (as_EmpNo_PCode == null || as_EmpNo_PCode.Trim() == "") as_EmpNo_PCode = "";
+
+        // 組出班表的過濾語法
+        ls_AddFilter = (this.Tid != "" ? " AND hme101a_psid = '" + this.Tid + "'" : "");
+
+        // 特殊日子
+        if (ls_kind != "")
+        {
+            // 如果為休假則顯示跟其他一樣(綠色)
+            if (ls_kind == "H") ls_kind = "3";
+
+            Label llb_day = new Label();
+            llb_day.Text = "　" + ls_show;
+            llb_day.ToolTip = ls_reason;
+            atd_Cell.ForeColor = Color.FromName(lsa_ForeColor[Convert.ToInt16(ls_kind)]);
+            atd_Cell.BackColor = Color.FromName(lsa_BackColor[Convert.ToInt16(ls_kind)]);
+            llb_day.Font.Size = FontUnit.Point(8);
+            atd_Cell.Controls.Add(llb_day);
+        }
+        else
+        {
+            // 不是特殊日子且不是六、日則設為工作日
+            if ("06".IndexOf(Convert.ToInt16(adt_Day.DayOfWeek).ToString()) < 0)
+                ls_kind = "0";
+        }
+
+        // 設定排序條件
+        this.indb_hme101a_hme101b.uf_Sort("hme101b_starttime, hme101b_endtime, hme101b_addtext, hme101b_needno");
+
+        // 過濾出本日的行事曆資料
+        this.indb_hme101a_hme101b.uf_Filter("hme101b_sdate = '" + ls_Day + "'" + ls_AddFilter);
+        if (this.indb_hme101a_hme101b.uf_RowCount() > 0)
+        {
+            ab_IsHaveEvent = true;
+
+            for (int li_row = 0; li_row < this.indb_hme101a_hme101b.uf_RowCount(); li_row++)
+            {
+                Label llb_day = new Label();
+
+                uf_Dg_BindDayShow(this.indb_hme101a_hme101b[li_row], llb_day);
+                //if (li_row == 0) 
+                llb_day.Text = "<BR>" + llb_day.Text;
+                atd_Cell.Controls.Add(llb_day);
+
+                // 只可編輯這個月的事件，且非唯讀
+                if (adt_Day.Year.ToString() == this.YearE && adt_Day.Month == Convert.ToInt16(this.Month) && this.ReadOnly == "False")
+                {
+                    if (this.OKFlag == "False")
+                    {
+                        Literal litr_Change1 = new Literal();
+                        litr_Change1.Text = (llb_day.Text.EndsWith("...</SPAN></FONT>") ? "" : "&nbsp;") + "&nbsp<A tabindex=\"-1\" href=\"javascript:__doPostBack('" + lbt_Change.Parent.ClientID + "$lbt_Change','1|" + this.indb_hme101a_hme101b[li_row]["hme101b_pdid"].ToString() + "')\"><IMG border=\"0\" src=\"" + this.Request.ApplicationPath + "/proj_img/Edit.gif\" align=\"absmiddle\" style=\"cursor=hand\" title=\"編輯\"></A>";
+                        atd_Cell.Controls.Add(litr_Change1);
+                    }
+                    else
+                    {
+                        Literal litr_Change3 = new Literal();
+                        litr_Change3.Text = "</BR><A tabindex=\"-1\" href=\"javascript:__doPostBack('" + lbt_Change.Parent.ClientID + "$lbt_Change','3|" + this.indb_hme101a_hme101b[li_row]["hme101b_pdid"].ToString() + "')\"><IMG border=\"0\" src=\"" + this.Request.ApplicationPath + "/proj_img/sNew.gif\" align=\"absmiddle\" style=\"cursor=hand\" title=\"班表需求異動\"></A>";
+                        atd_Cell.Controls.Add(litr_Change3);
+
+                        Literal litr_Change2 = new Literal();
+                        litr_Change2.Text = (llb_day.Text.EndsWith("...</SPAN></FONT>") ? "" : "&nbsp;") + "<A tabindex=\"-1\" href=\"javascript:__doPostBack('" + lbt_Change.Parent.ClientID + "$lbt_Change','2|" + this.indb_hme101a_hme101b[li_row]["hme101b_pdid"].ToString() + "')\"><IMG border=\"0\" src=\"" + this.Request.ApplicationPath + "/proj_img/sEdit.gif\" align=\"absmiddle\" style=\"cursor=hand\" title=\"編輯名單\"></A>";
+                        atd_Cell.Controls.Add(litr_Change2);
+                    }
+                }
+            }
+        }
+
+        this.indb_hme101a_hme101b.uf_Filter("");
+
+        atd_Cell.Wrap = false;
+    }	// End of uf_Dg_DayRender(2)
+
+    // =========================================================================
+    // 函式
+    // =========================================================================
+    /// <summary>
+    /// 函式描述：產生每一個日期所做的處理
+    /// </summary>
+    /// <param name="ai_WeekDay">星期幾</param>
+    /// <param name="atd_Cell">日期欄位</param>
+    /// <param name="ab_IsHaveEvent">回傳是否有事件</param>
+    private void uf_Dg_DayRender(int ai_WeekDay, TableCell atd_Cell, ref bool ab_IsHaveEvent)
+    {
+        // ##### 宣告變數 #####
+        string ls_kind = "", ls_show = "", ls_reason = "";
+        string ls_AddFilter = "";
+
+        // 色碼                      黃色       藍色       紫色       綠色       橘色
+        string[] lsa_ForeColor = { "#515128", "#000080", "#400080", "#004000", "#804000" };
+        string[] lsa_BackColor = { "#FFFFD8", "#D5FFFF", "#EDDBFF", "#E2FFC6", "#FFDCB8" };
+
+        // 組出班表的過濾語法
+        ls_AddFilter = (this.Tid != "" ? " AND hme105a_ssid = '" + this.Tid + "'" : "");
+
+        // 特殊日子
+        if (ls_kind != "")
+        {
+            // 如果為休假則顯示跟其他一樣(綠色)
+            if (ls_kind == "H") ls_kind = "3";
+
+            Label llb_day = new Label();
+            llb_day.Text = "　" + ls_show;
+            llb_day.ToolTip = ls_reason;
+            atd_Cell.ForeColor = Color.FromName(lsa_ForeColor[Convert.ToInt16(ls_kind)]);
+            atd_Cell.BackColor = Color.FromName(lsa_BackColor[Convert.ToInt16(ls_kind)]);
+            llb_day.Font.Size = FontUnit.Point(8);
+            atd_Cell.Controls.Add(llb_day);
+        }
+        else
+        {
+            // 不是特殊日子且不是六、日則設為工作日
+            if ("06".IndexOf(ai_WeekDay.ToString()) < 0)
+                ls_kind = "0";
+        }
+
+        // 設定排序條件
+        this.indb_hme105a_hme105b.uf_Sort("hme105b_starttime, hme105b_endtime, hme105b_addtext, hme105b_needno");
+
+        // 過濾出本日的行事曆資料
+        this.indb_hme105a_hme105b.uf_Filter("hme105b_weekday = '" + ai_WeekDay.ToString() + "'" + ls_AddFilter);
+        if (this.indb_hme105a_hme105b.uf_RowCount() > 0)
+        {
+            ab_IsHaveEvent = true;
+
+            for (int li_row = 0; li_row < this.indb_hme105a_hme105b.uf_RowCount(); li_row++)
+            {
+                Label llb_day = new Label();
+
+                uf_Dg_BindDayShow(this.indb_hme105a_hme105b[li_row], llb_day);
+                if (li_row > 0) 
+                llb_day.Text = "<BR>" + llb_day.Text;
+                atd_Cell.Controls.Add(llb_day);
+
+                //若為唯讀，不能修改
+                if (this.ReadOnly == "False")
+                {
+                    Literal litr_Change = new Literal();
+                    litr_Change.Text = (llb_day.Text.EndsWith("...</SPAN></FONT>") ? "" : "&nbsp;") + "<A tabindex=\"-1\" href=\"javascript:__doPostBack('" + lbt_Change.Parent.ClientID + "$lbt_Change','" + this.indb_hme105a_hme105b[li_row]["hme105b_sdid"].ToString() + "')\"><IMG border=\"0\" src=\"" + this.Request.ApplicationPath + "/proj_img/Edit.gif\" align=\"absmiddle\" style=\"cursor=hand\" title=\"編輯\"></A>";
+                    atd_Cell.Controls.Add(litr_Change);
+                }
+            }
+        }
+
+        this.indb_hme105a_hme105b.uf_Filter("");
+
+        atd_Cell.Wrap = false;
+    }	// End of uf_Dg_DayRender(3)
+
+
+    // =========================================================================
+    // 函式
+    // =========================================================================
+    /// <summary>
+    /// 函式描述：資料繫結–利用行事曆資料指定日曆天資料列決定顯示內容
+    /// </summary>
+    /// <param name="adrv_Row">行事曆資料資料列介面</param>
+    /// <returns>顯示內容</returns>
+    private void uf_Dg_BindDayShow(DataRowView adrv_Row, Label alb_Day)
+    {
+        // ##### 宣告變數 #####
+        string ls_starttime = "", ls_endtime = "", ls_addtext = "", ls_needno = "", ls_pdid = "", ls_show_event = "", ls_show = "";
+        int li_needno = 0 , li_hme101c_count = 0 , li_count = 0;
+        System.Text.Encoding l_Encoding = System.Text.Encoding.GetEncoding(950);	// 得到指定的編碼方式
+
+        // 取得相關欄位資料
+        if (this.i_ShowMode == ShowModes.Month)
+        {
+            ls_starttime = (adrv_Row["hme101b_starttime"] != DBNull.Value ? Convert.ToDateTime(adrv_Row["hme101b_starttime"]).ToString("HHmm") : "");
+            ls_endtime = (adrv_Row["hme101b_endtime"] != DBNull.Value ? Convert.ToDateTime(adrv_Row["hme101b_endtime"]).ToString("HHmm") : "");
+            ls_addtext = adrv_Row["hme101b_addtext"].ToString().Trim();
+            ls_needno = adrv_Row["hme101b_needno"].ToString().Trim();
+            li_needno = Convert.ToInt16(adrv_Row["hme101b_needno"]);
+            ls_pdid = adrv_Row["hme101b_pdid"].ToString().Trim();
+        }
+        else
+        {
+            ls_starttime = (adrv_Row["hme105b_starttime"] != DBNull.Value ? Convert.ToDateTime(adrv_Row["hme105b_starttime"]).ToString("HHmm") : "");
+            ls_endtime = (adrv_Row["hme105b_endtime"] != DBNull.Value ? Convert.ToDateTime(adrv_Row["hme105b_endtime"]).ToString("HHmm") : "");
+            ls_addtext = adrv_Row["hme105b_addtext"].ToString().Trim();
+            ls_needno = adrv_Row["hme105b_needno"].ToString().Trim();
+            li_needno = Convert.ToInt16(adrv_Row["hme105b_needno"]);
+            ls_pdid = adrv_Row["hme105b_sdid"].ToString().Trim();
+        }
+
+        // 取得長度時的事件顯示名稱–中文字算 2，英文字算 1
+        ls_show_event = ls_addtext;
+        for (int li_i = 0; li_i < ls_addtext.Length; li_i++)
+        {
+            if (l_Encoding.GetByteCount(ls_addtext.Substring(0, li_i + 1)) > 12)
+            {
+                ls_show_event = ls_addtext.Substring(0, li_i) + "...";
+                break;
+            }
+        }
+
+        // 組出顯示內容
+        ls_show += "<BR>" + "<FONT style=\"color:Blue\"><SPAN style=\"font-size:11px\">★";
+        ls_show += ls_show_event;
+        ls_show += "</SPAN></FONT>";
+
+        ls_show += "<FONT style=\"color:Black\"><SPAN style=\"font-size:11px\">";
+        ls_show += "(" + ls_needno + ")";
+        ls_show += "</SPAN></FONT>";
+
+        ls_show += "<BR>" + "<FONT style=\"color:Black\"><SPAN style=\"font-size:11px\">";
+        ls_show += ls_starttime + "~" + ls_endtime;
+        ls_show += "</SPAN></FONT>";
+
+        if (this.i_ShowMode == ShowModes.Month && this.ShowPeople == "True")
+        {
+            indb_hme101c.uf_Retrieve(" AND hme101c_pdid = '" + ls_pdid + "' ");
+            // 設定排序條件
+            this.indb_hme101c.uf_Sort("hme101c_pdid, hme101c_vid");
+
+            // 過濾出該需求班次的班表志願
+            this.indb_hme101c.uf_Filter("hme101c_pdid = '" + ls_pdid + "'");
+            li_hme101c_count = this.indb_hme101c.uf_RowCount();
+            if (li_hme101c_count > 0)
+            {
+                for (int li_row = 0; li_row < li_hme101c_count; li_row++)
+                {
+                    ls_show += "<BR>" + "<FONT style=\"color:Green\"><SPAN style=\"font-size:11px\">";
+                    ls_show += uf_Dg_Bind("hmd201", this.indb_hme101c[li_row]["hme101c_vid"]);
+                    ls_show += "</SPAN></FONT>";
+                }
+
+                if (this.CountPeople == "True")
+                {
+                    if (li_needno > li_hme101c_count)
+                    {
+                        li_count = li_needno - li_hme101c_count;
+                        ls_show += "<BR>" + "<FONT style=\"color:#cc0000\"><SPAN style=\"font-size:11px\">";
+                        ls_show += "(缺 " + li_count.ToString() + ")";
+                        ls_show += "</SPAN></FONT>";
+                    }
+                    else if (li_hme101c_count > li_needno)
+                    {
+                        li_count = li_hme101c_count - li_needno;
+                        ls_show += "<BR>" + "<FONT style=\"color:#cc0099\"><SPAN style=\"font-size:11px\">";
+                        ls_show += "(多 " + li_count.ToString() + ")";
+                        ls_show += "</SPAN></FONT>";
+                    }
+                    else
+                    {
+                        ls_show += "<BR>" + "<FONT style=\"color:DimGray\"><SPAN style=\"font-size:11px\">";
+                        ls_show += "(v)";
+                        ls_show += "</SPAN></FONT>";
+                    }
+                }
+            }
+            else if (this.CountPeople == "True")
+            {
+                ls_show += "<BR>" + "<FONT style=\"color:#cc0000\"><SPAN style=\"font-size:11px\">";
+                ls_show += "(缺 " + li_needno.ToString() + ")";
+                ls_show += "</SPAN></FONT>";
+            }
+        }
+
+        alb_Day.Text = ls_show;
+
+        if (this.i_ShowMode == ShowModes.Month)
+        {
+            alb_Day.ToolTip = ""
+                + "報到地點：" + ls_addtext
+                + (adrv_Row["hme101b_note"].ToString().Trim() != "" ? "\n工作說明：" + adrv_Row["hme101b_note"].ToString().Trim() : "");
+        }
+        else
+        {
+            alb_Day.ToolTip = ""
+                + "報到地點：" + ls_addtext
+                + (adrv_Row["hme105b_note"].ToString().Trim() != "" ? "\n工作說明：" + adrv_Row["hme105b_note"].ToString().Trim() : "");
+        }
+
+        alb_Day.Attributes["onmouseover"] = "uf_Tip(\'" + alb_Day.ToolTip.Replace("'", "\\'").Replace("\"", "&quot;").Replace("\r\n", "<br />").Replace("\n", "<br />") + "', '')";
+        alb_Day.Attributes["onmouseout"] = "UnTip()";
+        alb_Day.ToolTip = "";
+    }	// End of uf_Dg_BindDayShow
+
+    // =========================================================================
+    // 函式
+    // =========================================================================
+    /// <summary>
+    /// 函式描述：資料繫結–利用行事曆資料指定日曆天資料列決定顯示內容
+    /// </summary>
+    /// <param name="adrv_Row">行事曆資料資料列介面</param>
+    /// <returns>顯示內容</returns>
+    private void uf_BindDateShow(DataRowView adrv_Row, Label alb_Day)
+    {
+        // ##### 宣告變數 #####
+        string ls_starttime = "", ls_endtime = "", ls_addtext = "", ls_needno = "", ls_pdid = "", ls_show_event = "", ls_show = "" , ls_day = "";
+        int li_needno = 0, li_hme101c_count = 0, li_count = 0;
+        System.Text.Encoding l_Encoding = System.Text.Encoding.GetEncoding(950);	// 得到指定的編碼方式
+
+        ls_starttime = (adrv_Row["hme105b_starttime"] != DBNull.Value ? Convert.ToDateTime(adrv_Row["hme105b_starttime"]).ToString("HH:mm") : "");
+        ls_endtime = (adrv_Row["hme105b_endtime"] != DBNull.Value ? Convert.ToDateTime(adrv_Row["hme105b_endtime"]).ToString("HH:mm") : "");
+        ls_addtext = adrv_Row["hme105b_addtext"].ToString().Trim();
+        ls_needno = adrv_Row["hme105b_needno"].ToString().Trim();
+        li_needno = Convert.ToInt16(adrv_Row["hme105b_needno"]);
+        ls_pdid = adrv_Row["hme105b_sdid"].ToString().Trim();
+        ls_day = adrv_Row["hme105b_sdate"].ToString().Trim();
+
+        // 組出顯示內容
+        ls_show += "　　　　" + "<FONT style=\"color:Blue\"><SPAN style=\"font-size:12px\">★ ";
+        ls_show += ls_addtext;
+        ls_show += "</SPAN></FONT>";
+
+        ls_show += "<FONT style=\"color:Black\"><SPAN style=\"font-size:12px\">";
+        ls_show += "(" + ls_needno + ")：";
+        ls_show += "</SPAN></FONT>";
+
+        ls_show += "<FONT style=\"color:Black\"><SPAN style=\"font-size:12px\">";
+        ls_show += "每月" + ls_day + "日 ";
+        ls_show += ls_starttime + " ~ " + ls_endtime;
+        ls_show += "</SPAN></FONT>";
+
+        alb_Day.Text = ls_show;
+
+        alb_Day.ToolTip = ""
+            + "報到地點：" + ls_addtext
+            + (adrv_Row["hme105b_note"].ToString().Trim() != "" ? "\n工作說明：" + adrv_Row["hme105b_note"].ToString().Trim() : "");
+
+        alb_Day.Attributes["onmouseover"] = "uf_Tip(\'" + alb_Day.ToolTip.Replace("'", "\\'").Replace("\"", "&quot;").Replace("\r\n", "<br />").Replace("\n", "<br />") + "', '')";
+        alb_Day.Attributes["onmouseout"] = "UnTip()";
+        alb_Day.ToolTip = "";
+    }	// End of uf_BindDateShow
+
+    // =========================================================================
+    // 函式
+    // =========================================================================
+    /// <summary>
+    /// 函式描述：產生特定日期所做的處理
+    /// </summary>
+    private void uf_WeekShow()
+    {
+        // ##### 宣告變數 #####
+        TableCell atd_Cell = new TableCell();
+        TableRow ltr_Row = new TableRow();
+        string ls_AddFilter = "";
+
+        // 色碼                      黃色       藍色       紫色       綠色       橘色
+        string[] lsa_ForeColor = { "#515128", "#000080", "#400080", "#004000", "#804000" };
+        string[] lsa_BackColor = { "#FFFFD8", "#D5FFFF", "#EDDBFF", "#E2FFC6", "#FFDCB8" };
+
+        // 組出班表的過濾語法
+        ls_AddFilter = (this.Tid != "" ? " AND hme105a_ssid = '" + this.Tid + "'" : "");
+
+        // 設定排序條件
+        this.indb_hme105a_hme105b.uf_Sort("hme105b_starttime, hme105b_endtime, hme105b_addtext, hme105b_needno");
+
+        lb_DateTitle.Text = "<BR>特定日期：";
+
+        // 過濾出本日的行事曆資料
+        this.indb_hme105a_hme105b.uf_Filter("hme105b_type = '2'" + ls_AddFilter);
+        if (this.indb_hme105a_hme105b.uf_RowCount() > 0)
+        {
+            for (int li_row = 0; li_row < this.indb_hme105a_hme105b.uf_RowCount(); li_row++)
+            {
+                Label llb_day = new Label();
+
+                uf_BindDateShow(this.indb_hme105a_hme105b[li_row], llb_day);
+                if (li_row > 0)
+                    llb_day.Text = "<BR>" + llb_day.Text;
+                atd_Cell.Controls.Add(llb_day);
+
+                Literal litr_Change = new Literal();
+                litr_Change.Text = (llb_day.Text.EndsWith("...</SPAN></FONT>") ? "" : "&nbsp;") + "<A tabindex=\"-1\" href=\"javascript:__doPostBack('" + lbt_Change.Parent.ClientID + "$lbt_Change','" + this.indb_hme105a_hme105b[li_row]["hme105b_sdid"].ToString() + "')\"><IMG border=\"0\" src=\"" + this.Request.ApplicationPath + "/proj_img/Edit.gif\" align=\"absmiddle\" style=\"cursor=hand\" title=\"編輯\"></A>";
+                atd_Cell.Controls.Add(litr_Change);
+            }
+        }
+
+        this.indb_hme105a_hme105b.uf_Filter("");
+
+        atd_Cell.Wrap = false;
+
+        // 控制項初始化 ------------------------------------------------- ☆
+        for (int li_i = MyShowDate.Rows.Count - 1; li_i >= 1; li_i--)
+            MyShowDate.Rows.RemoveAt(li_i);
+
+        ltr_Row.Cells.Add(atd_Cell);
+        MyShowDate.Rows.Add(ltr_Row);
+
+    }	// End of uf_WeekShow
+
+
+
+    #endregion
+
+    // =========================================================================
+    // 事件
+    // =========================================================================
+    /// <summary>
+    /// 事件描述：按下 lbt_Change 《變更事件參加狀態》按鈕所做的處理
+    /// </summary>
+    private void lbt_Change_Click(object sender, System.EventArgs e)
+    {
+        // 執行事件
+        if (this.ue_EventEditChanged != null)
+        {
+            if (this.Request["__EVENTARGUMENT"] == null) return;
+
+            // ##### 宣告變數 #####
+            string[] lsa_args = this.Request["__EVENTARGUMENT"].Trim().Split('|');	// 0: 1:hme101b_pdid
+
+            this.ue_EventEditChanged(this.Request["__EVENTARGUMENT"].Trim());
+        }
+    }	// End of lbt_Change_Click
+}

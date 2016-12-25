@@ -1,0 +1,159 @@
+﻿
+// *********************************************************************************
+// 1. 程式描述：系統公告管理–系統公告
+// 2. 撰寫人員：
+// *********************************************************************************
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using WIT.Template.Project;
+
+public partial class sys_z_z02_p_z0202 : p_sBase
+{
+	#region ☆ Declare Variables -------------------------------------- 撰寫人員：Linda
+
+	/// <summary>變數描述：公告管理資料元件</summary>
+    //protected ndb_aec02 indb_aec02 = new ndb_aec02();
+
+	#endregion
+
+	// =========================================================================
+	/// <summary>
+	/// 事件描述：網頁開啟
+	/// </summary>
+	protected void Page_Load(object sender, EventArgs e)
+    {
+		this.IsAJAXScript = true;
+		
+		//U_DateSelect_ROC3.Value = "2008 / 06 / 30";
+
+		// 建立一個暫存表格1
+        //DataTable ldt_EmpList = new DataTable("EmpList");
+        //DataView ldv_EmpList = ldt_EmpList.DefaultView;
+        //DataRowView ldrv_New;
+
+        //// 增加欄位
+        //ldt_EmpList.Columns.Add("名稱", typeof(String));
+        //ldt_EmpList.Columns.Add("年度", typeof(String));
+        //ldt_EmpList.Columns.Add("季", typeof(String));
+        //ldt_EmpList.Columns.Add("考核類別", typeof(String));
+        //ldt_EmpList.Columns.Add("狀況", typeof(String));
+        
+        ////ldt_EmpList.Columns.Add("支票號碼", typeof(String));
+        ////ldt_EmpList.Columns.Add("支票開立日期", typeof(String));
+        ////ldt_EmpList.Columns.Add("受(繳)款人", typeof(String));
+        ////ldt_EmpList.Columns.Add("支票金額", typeof(String));
+        ////ldt_EmpList.Columns.Add("支票兌現到期日", typeof(String));
+        ////ldt_EmpList.Columns.Add("劃線", typeof(String));
+        ////ldt_EmpList.Columns.Add("禁背", typeof(String));
+        ////ldt_EmpList.Columns.Add("郵寄日期", typeof(String));
+
+
+        //ldrv_New = ldv_EmpList.AddNew();
+        //ldrv_New["名稱"] = "97年度海科館實習志工年度考核";
+        //ldrv_New["年度"] = "097";
+        //ldrv_New["季"] = "-";
+        //ldrv_New["考核類別"] = "實習志工";
+        //ldrv_New["狀況"] = "已完成";
+
+        //ldrv_New = ldv_EmpList.AddNew();
+        //ldrv_New["名稱"] = "97年度海科館志工年度考核";
+        //ldrv_New["年度"] = "097";
+        //ldrv_New["季"] = "-";
+        //ldrv_New["考核類別"] = "志工年度考核";
+        //ldrv_New["狀況"] = "未完成";
+
+        //ldrv_New = ldv_EmpList.AddNew();
+        //ldrv_New["名稱"] = "97年度海科館志工第1季考核";
+        //ldrv_New["年度"] = "097";
+        //ldrv_New["季"] = "1";
+        //ldrv_New["考核類別"] = "志工季考核";
+        //ldrv_New["狀況"] = "已完成";
+
+        //ldrv_New = ldv_EmpList.AddNew();
+        //ldrv_New["名稱"] = "97年度海科館志工第2季考核";
+        //ldrv_New["年度"] = "097";
+        //ldrv_New["季"] = "2";
+        //ldrv_New["考核類別"] = "志工季考核";
+        //ldrv_New["狀況"] = "已完成";
+
+
+
+        //DataGrid1.DataSource = ldv_EmpList;
+        //DataGrid1.DataBind();
+
+        // 建立一個暫存表格1
+        DataTable ldt_emp1List = new DataTable("emp1List");
+        DataView ldv_emp1List = ldt_emp1List.DefaultView;
+        DataRowView ldrv_New;
+ 
+        
+
+        // 增加欄位
+        ldt_emp1List.Columns.Add("班次代碼", typeof(String));
+        ldt_emp1List.Columns.Add("講師", typeof(String));
+        ldt_emp1List.Columns.Add("日期", typeof(String));
+        ldt_emp1List.Columns.Add("時間", typeof(String));
+        ldt_emp1List.Columns.Add("人數", typeof(String));
+        ldt_emp1List.Columns.Add("餘額", typeof(String));
+      
+
+        ldrv_New = ldv_emp1List.AddNew();
+        ldrv_New["班次代碼"] = "t098-0001";
+        ldrv_New["講師"] = "海格";
+        ldrv_New["日期"] = "098/02/22";
+        ldrv_New["時間"] = "09:00-10:00";
+        ldrv_New["人數"] = "01";
+        ldrv_New["餘額"] = "1";
+
+        ldrv_New = ldv_emp1List.AddNew();
+        ldrv_New["班次代碼"] = "t098-0002";
+        ldrv_New["講師"] = "河大海";
+        ldrv_New["日期"] = "098/02/23";
+        ldrv_New["時間"] = "14:00-18:00";
+        ldrv_New["人數"] = "20";
+        ldrv_New["餘額"] = "0";
+        
+        ldrv_New = ldv_emp1List.AddNew();
+        ldrv_New["班次代碼"] = "t098-0003";
+        ldrv_New["講師"] = "江志誠";
+        ldrv_New["日期"] = "098/02/24";
+        ldrv_New["時間"] = "09:00-12:00";
+        ldrv_New["人數"] = "10";
+        ldrv_New["餘額"] = "0";
+        
+        ldrv_New = ldv_emp1List.AddNew();
+        ldrv_New["班次代碼"] = "t098-0004";
+        ldrv_New["講師"] = "湯小哈";
+        ldrv_New["日期"] = "098/02/25";
+        ldrv_New["時間"] = "10:00-12:00";
+        ldrv_New["人數"] = "20";
+        ldrv_New["餘額"] = "10";
+
+
+        dgG.DataSource = ldv_emp1List;
+        dgG.DataBind();
+      
+	}
+
+
+
+
+
+
+    protected void TextBox6_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+    protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
+    {
+
+    }
+}

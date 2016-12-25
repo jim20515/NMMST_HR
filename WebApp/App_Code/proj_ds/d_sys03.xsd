@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="d_sys03" targetNamespace="http://tempuri.org/d_sys03.xsd" xmlns:mstns="http://tempuri.org/d_sys03.xsd" xmlns="http://tempuri.org/d_sys03.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="d_sys03" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="d_sys03" msprop:Generator_DataSetName="d_sys03">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="sys03" msprop:Generator_UserTableName="sys03" msprop:Generator_RowDeletedName="sys03RowDeleted" msprop:Generator_TableClassName="sys03DataTable" msprop:Generator_RowChangedName="sys03RowChanged" msprop:Generator_RowClassName="sys03Row" msprop:Generator_RowChangingName="sys03RowChanging" msprop:Generator_RowEvArgName="sys03RowChangeEvent" msprop:Generator_RowEvHandlerName="sys03RowChangeEventHandler" msprop:Generator_TablePropName="sys03" msprop:Generator_TableVarName="tablesys03" msprop:Generator_RowDeletingName="sys03RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="s03_grp_id" msprop:Generator_UserColumnName="s03_grp_id" msprop:Generator_ColumnPropNameInRow="s03_grp_id" msprop:Generator_ColumnVarNameInTable="columns03_grp_id" msprop:Generator_ColumnPropNameInTable="s03_grp_idColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s03_sys_id" msprop:Generator_UserColumnName="s03_sys_id" msprop:Generator_ColumnPropNameInRow="s03_sys_id" msprop:Generator_ColumnVarNameInTable="columns03_sys_id" msprop:Generator_ColumnPropNameInTable="s03_sys_idColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s03_func_id" msprop:Generator_UserColumnName="s03_func_id" msprop:Generator_ColumnPropNameInRow="s03_func_id" msprop:Generator_ColumnVarNameInTable="columns03_func_id" msprop:Generator_ColumnPropNameInTable="s03_func_idColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:sys03" />
+      <xs:field xpath="mstns:s03_grp_id" />
+      <xs:field xpath="mstns:s03_sys_id" />
+      <xs:field xpath="mstns:s03_func_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

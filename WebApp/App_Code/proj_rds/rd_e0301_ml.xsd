@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="rd_e0301_ml" targetNamespace="http://tempuri.org/rd_e0301_ml.xsd" xmlns:mstns="http://tempuri.org/rd_e0301_ml.xsd" xmlns="http://tempuri.org/rd_e0301_ml.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="hmd201_mlTableAdapter" GeneratorDataComponentClassName="hmd201_mlTableAdapter" Name="hmd201_ml" UserDataComponentName="hmd201_mlTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="NMMST_HR.dbo.hmd201_ml" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>
+						select (ROW_NUMBER() OVER (ORDER BY hmd201_vid) - 1) / 2 + 1 AS TitleRow, (ROW_NUMBER() OVER (ORDER BY hmd201_vid) - 1) % 2 + 1 AS TitleColumn, hmd201_vid , hmd201_cname , hmd201_tid , ( SELECT hmd101_tname From hmd101 Where hmd101_tid = hmd201_tid ) as tname , hmd201_enCodeID From hmd201 Where ( 1 = 1 )
+					</CommandText>
+					<Parameters>
+					</Parameters>
+				</DbCommand>
+			</SelectCommand>
+		</DbSource>
+	</MainSource>
+	<Mappings>
+              <Mapping SourceColumn="TitleRow" DataSetColumn="TitleRow" />
+              <Mapping SourceColumn="TitleColumn" DataSetColumn="TitleColumn" />
+              <Mapping SourceColumn="hmd201_vid" DataSetColumn="hmd201_vid" />
+              <Mapping SourceColumn="hmd201_cname" DataSetColumn="hmd201_cname" />
+              <Mapping SourceColumn="hmd201_tid" DataSetColumn="hmd201_tid" />
+              <Mapping SourceColumn="tname" DataSetColumn="tname" />
+              <Mapping SourceColumn="hmd201_enCodeID" DataSetColumn="hmd201_enCodeID" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="rd_e0301_ml" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="rd_e0301_ml" msprop:Generator_DataSetName="rd_e0301_ml">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="hmd201_ml" msprop:Generator_UserTableName="hmd201_ml" msprop:Generator_RowDeletedName="hmd201_mlRowDeleted" msprop:Generator_TableClassName="hmd201_mlDataTable" msprop:Generator_RowChangedName="hmd201_mlRowChanged" msprop:Generator_RowClassName="hmd201_mlRow" msprop:Generator_RowChangingName="hmd201_mlRowChanging" msprop:Generator_RowEvArgName="hmd201_mlRowChangeEvent" msprop:Generator_RowEvHandlerName="hmd201_mlRowChangeEventHandler" msprop:Generator_TablePropName="hmd201_ml" msprop:Generator_TableVarName="tablehmd201_ml" msprop:Generator_RowDeletingName="hmd201_mlRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TitleRow" msdata:ReadOnly="true" msprop:Generator_UserColumnName="TitleRow" msprop:Generator_ColumnPropNameInRow="TitleRow" msprop:Generator_ColumnVarNameInTable="columnTitleRow" msprop:Generator_ColumnPropNameInTable="TitleRowColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="TitleColumn" msdata:ReadOnly="true" msprop:Generator_UserColumnName="TitleColumn" msprop:Generator_ColumnPropNameInRow="TitleColumn" msprop:Generator_ColumnVarNameInTable="columnTitleColumn" msprop:Generator_ColumnPropNameInTable="TitleColumnColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="hmd201_vid" msprop:Generator_UserColumnName="hmd201_vid" msprop:Generator_ColumnPropNameInRow="hmd201_vid" msprop:Generator_ColumnVarNameInTable="columnhmd201_vid" msprop:Generator_ColumnPropNameInTable="hmd201_vidColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hmd201_cname" msprop:Generator_UserColumnName="hmd201_cname" msprop:Generator_ColumnPropNameInRow="hmd201_cname" msprop:Generator_ColumnVarNameInTable="columnhmd201_cname" msprop:Generator_ColumnPropNameInTable="hmd201_cnameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hmd201_tid" msprop:Generator_UserColumnName="hmd201_tid" msprop:Generator_ColumnPropNameInRow="hmd201_tid" msprop:Generator_ColumnVarNameInTable="columnhmd201_tid" msprop:Generator_ColumnPropNameInTable="hmd201_tidColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tname" msdata:ReadOnly="true" msprop:Generator_UserColumnName="tname" msprop:Generator_ColumnPropNameInRow="tname" msprop:Generator_ColumnVarNameInTable="columntname" msprop:Generator_ColumnPropNameInTable="tnameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hmd201_enCodeID" msprop:Generator_UserColumnName="hmd201_enCodeID" msprop:Generator_ColumnPropNameInRow="hmd201_enCodeID" msprop:Generator_ColumnVarNameInTable="columnhmd201_enCodeID" msprop:Generator_ColumnPropNameInTable="hmd201_enCodeIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:hmd201_ml" />
+      <xs:field xpath="mstns:hmd201_vid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

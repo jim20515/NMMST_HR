@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="d_sys07" targetNamespace="http://tempuri.org/d_sys07.xsd" xmlns:mstns="http://tempuri.org/d_sys07.xsd" xmlns="http://tempuri.org/d_sys07.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="d_sys07" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="d_sys07" msprop:Generator_DataSetName="d_sys07">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="sys07" msprop:Generator_UserTableName="sys07" msprop:Generator_RowDeletedName="sys07RowDeleted" msprop:Generator_TableClassName="sys07DataTable" msprop:Generator_RowChangedName="sys07RowChanged" msprop:Generator_RowClassName="sys07Row" msprop:Generator_RowChangingName="sys07RowChanging" msprop:Generator_RowEvArgName="sys07RowChangeEvent" msprop:Generator_RowEvHandlerName="sys07RowChangeEventHandler" msprop:Generator_TablePropName="sys07" msprop:Generator_TableVarName="tablesys07" msprop:Generator_RowDeletingName="sys07RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="s07_no" msprop:Generator_UserColumnName="s07_no" msprop:Generator_ColumnPropNameInRow="s07_no" msprop:Generator_ColumnVarNameInTable="columns07_no" msprop:Generator_ColumnPropNameInTable="s07_noColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s07_unit" msprop:Generator_UserColumnName="s07_unit" msprop:Generator_ColumnPropNameInRow="s07_unit" msprop:Generator_ColumnVarNameInTable="columns07_unit" msprop:Generator_ColumnPropNameInTable="s07_unitColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s07_man" msprop:Generator_UserColumnName="s07_man" msprop:Generator_ColumnPropNameInRow="s07_man" msprop:Generator_ColumnVarNameInTable="columns07_man" msprop:Generator_ColumnPropNameInTable="s07_manColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s07_tounit" msprop:Generator_UserColumnName="s07_tounit" msprop:Generator_ColumnPropNameInRow="s07_tounit" msprop:Generator_ColumnVarNameInTable="columns07_tounit" msprop:Generator_ColumnPropNameInTable="s07_tounitColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s07_pdate" msprop:Generator_UserColumnName="s07_pdate" msprop:Generator_ColumnPropNameInRow="s07_pdate" msprop:Generator_ColumnVarNameInTable="columns07_pdate" msprop:Generator_ColumnPropNameInTable="s07_pdateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="s07_edate" msprop:Generator_UserColumnName="s07_edate" msprop:Generator_ColumnPropNameInRow="s07_edate" msprop:Generator_ColumnVarNameInTable="columns07_edate" msprop:Generator_ColumnPropNameInTable="s07_edateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="s07_title" msprop:Generator_UserColumnName="s07_title" msprop:Generator_ColumnPropNameInRow="s07_title" msprop:Generator_ColumnVarNameInTable="columns07_title" msprop:Generator_ColumnPropNameInTable="s07_titleColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s07_content" msprop:Generator_UserColumnName="s07_content" msprop:Generator_ColumnPropNameInRow="s07_content" msprop:Generator_ColumnVarNameInTable="columns07_content" msprop:Generator_ColumnPropNameInTable="s07_contentColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s07_url" msprop:Generator_UserColumnName="s07_url" msprop:Generator_ColumnPropNameInRow="s07_url" msprop:Generator_ColumnVarNameInTable="columns07_url" msprop:Generator_ColumnPropNameInTable="s07_urlColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s07_stop" msprop:Generator_UserColumnName="s07_stop" msprop:Generator_ColumnPropNameInRow="s07_stop" msprop:Generator_ColumnVarNameInTable="columns07_stop" msprop:Generator_ColumnPropNameInTable="s07_stopColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s07_sort" msprop:Generator_UserColumnName="s07_sort" msprop:Generator_ColumnPropNameInRow="s07_sort" msprop:Generator_ColumnVarNameInTable="columns07_sort" msprop:Generator_ColumnPropNameInTable="s07_sortColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="s07_chp" msprop:Generator_UserColumnName="s07_chp" msprop:Generator_ColumnPropNameInRow="s07_chp" msprop:Generator_ColumnVarNameInTable="columns07_chp" msprop:Generator_ColumnPropNameInTable="s07_chpColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s07_chd" msprop:Generator_UserColumnName="s07_chd" msprop:Generator_ColumnPropNameInRow="s07_chd" msprop:Generator_ColumnVarNameInTable="columns07_chd" msprop:Generator_ColumnPropNameInTable="s07_chdColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:sys07" />
+      <xs:field xpath="mstns:s07_no" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
